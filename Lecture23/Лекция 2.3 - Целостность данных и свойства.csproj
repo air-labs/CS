@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>b527d31e-9fdb-4de9-8195-434607749412</ProjectGuid>
+    <ProjectGuid>{9BFD2B59-C5F6-4C54-BA0C-3FCE63076FF3}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Lecture23</RootNamespace>
@@ -41,7 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="S03 - Декорирование полей методами.cs" />
+    <Compile Include="S04 - Декорирование полей свойствами.cs" />
+    <Compile Include="S05 - Свойства только для чтения.cs" />
+    <Compile Include="S06 - Свойства с раздельным доступом.cs" />
+    <Compile Include="S07 - Автосвойства и поля только для чтения.cs" />
+    <Compile Include="S08 - Свойства-вычислители.cs" />
+    <Compile Include="S09 - Индексаторы.cs" />
+    <Compile Include="S01 - Ошибки целостности.cs" />
+    <Compile Include="S02 - Защита целостности.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

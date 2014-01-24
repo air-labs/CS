@@ -17,8 +17,6 @@ namespace S05
             point.X = 5;
             point.Y = 10;
 
-            somePoint.X = 10;
-            somePoint.Y = 20;
         }
     }
 }

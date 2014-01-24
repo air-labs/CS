@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lecture21 - классы и структуры", "Lecture21\Lecture21 - классы и структуры.csproj", "{A6C5C824-2B01-4100-AB8C-4CB50F4A252C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 2.1 - Классы и структуры", "Lecture21\Лекция 2.1 - Классы и структуры.csproj", "{A6C5C824-2B01-4100-AB8C-4CB50F4A252C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lecture22 - методы", "Lecture22\Lecture22 - методы.csproj", "{2D7B26C6-C786-4CE9-8442-F711C493917C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 2.2 - Методы", "Lecture22\Лекция 2.2 - Методы.csproj", "{2D7B26C6-C786-4CE9-8442-F711C493917C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lecture23 - свойства", "Lecture23\Lecture23 - свойства.csproj", "{2DC6D1B8-5F08-4EF5-B248-4B4645694F8E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 2 - Инкапсуляция", "Модуль 2 - Инкапсуляция", "{351394E1-F128-4725-BD62-DB03992E9757}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 2.3 - Целостность данных и свойства", "Lecture23\Лекция 2.3 - Целостность данных и свойства.csproj", "{9BFD2B59-C5F6-4C54-BA0C-3FCE63076FF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,12 +23,17 @@ Global
 		{2D7B26C6-C786-4CE9-8442-F711C493917C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D7B26C6-C786-4CE9-8442-F711C493917C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D7B26C6-C786-4CE9-8442-F711C493917C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2DC6D1B8-5F08-4EF5-B248-4B4645694F8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2DC6D1B8-5F08-4EF5-B248-4B4645694F8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2DC6D1B8-5F08-4EF5-B248-4B4645694F8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2DC6D1B8-5F08-4EF5-B248-4B4645694F8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BFD2B59-C5F6-4C54-BA0C-3FCE63076FF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BFD2B59-C5F6-4C54-BA0C-3FCE63076FF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BFD2B59-C5F6-4C54-BA0C-3FCE63076FF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BFD2B59-C5F6-4C54-BA0C-3FCE63076FF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A6C5C824-2B01-4100-AB8C-4CB50F4A252C} = {351394E1-F128-4725-BD62-DB03992E9757}
+		{2D7B26C6-C786-4CE9-8442-F711C493917C} = {351394E1-F128-4725-BD62-DB03992E9757}
+		{9BFD2B59-C5F6-4C54-BA0C-3FCE63076FF3} = {351394E1-F128-4725-BD62-DB03992E9757}
 	EndGlobalSection
 EndGlobal

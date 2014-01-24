@@ -20,7 +20,7 @@ public class S02
         Print(text, ConsoleColor.Gray, ConsoleColor.Black);
     }
 
-    public static void MainX()
+    public static void Main()
     {
         Print("some text here", ConsoleColor.Yellow, ConsoleColor.Blue);
         Print("some text here", ConsoleColor.Yellow);

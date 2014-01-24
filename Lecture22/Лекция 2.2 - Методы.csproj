@@ -41,9 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="S08 - ликвидация out-параметров nullable.cs" />
-    <Compile Include="S07 - ликвидация out-параметров Tuple.cs" />
-    <Compile Include="S06 - ликвидация out-параметров классом.cs" />
+    <Compile Include="S11 - Перегрузка операторов.cs" />
+    <Compile Include="S12 - Перегрузка операторов.cs" />
+    <Compile Include="S13 - Операторы конверсии.cs" />
+    <Compile Include="S08 - Ликвидация out-параметров nullable.cs" />
+    <Compile Include="S07 - Ликвидация out-параметров Tuple.cs" />
+    <Compile Include="S06 - Ликвидация out-параметров классом.cs" />
     <Compile Include="S02 - Перегруженные методы.cs" />
     <Compile Include="S03 - Параметры по умолчанию.cs" />
     <Compile Include="S04 - Переменное количество параметров.cs" />
@@ -51,7 +54,6 @@
     <Compile Include="S09 - ref-параметры.cs" />
     <Compile Include="S10 - Методы расширения.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="S01 - Объявление и вызов методов.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

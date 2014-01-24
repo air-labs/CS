@@ -63,7 +63,7 @@ namespace S01
     {
 
 
-        public static void MainX()
+        public static void Main()
         {
 
 
