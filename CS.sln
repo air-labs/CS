@@ -25,6 +25,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 4.1 - Файл
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 4.2 - Управление памятью", "Lecture42\Лекция 4.2 - Управление памятью.csproj", "{168B899F-5623-4554-AA91-260C4A46B202}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 5 - Наследование и полиморфизм", "Модуль 5 - Наследование и полиморфизм", "{67720584-2001-4906-968A-D0889D28A299}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 5.1. - Интерфейсы", "Lecture51\Лекция 5.1. - Интерфейсы.csproj", "{F377FA71-FAB2-431B-A65C-FBC40BFA35D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 5.2. - Базовые классы", "Lecture52\Лекция 5.2. - Базовые классы.csproj", "{30B55616-2032-484C-BACE-C7CB341DFF05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +69,14 @@ Global
 		{168B899F-5623-4554-AA91-260C4A46B202}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{168B899F-5623-4554-AA91-260C4A46B202}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{168B899F-5623-4554-AA91-260C4A46B202}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F377FA71-FAB2-431B-A65C-FBC40BFA35D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F377FA71-FAB2-431B-A65C-FBC40BFA35D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F377FA71-FAB2-431B-A65C-FBC40BFA35D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F377FA71-FAB2-431B-A65C-FBC40BFA35D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30B55616-2032-484C-BACE-C7CB341DFF05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30B55616-2032-484C-BACE-C7CB341DFF05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30B55616-2032-484C-BACE-C7CB341DFF05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30B55616-2032-484C-BACE-C7CB341DFF05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,5 +91,7 @@ Global
 		{0F31E012-294C-419F-B7C4-DB055B047E6F} = {BD5C9724-C623-4942-AB84-9C39DF06F8F6}
 		{19C7870C-0112-458F-84C6-3A73D1F65BC7} = {871BDCE4-095A-464A-914A-AA26209E1C12}
 		{168B899F-5623-4554-AA91-260C4A46B202} = {871BDCE4-095A-464A-914A-AA26209E1C12}
+		{F377FA71-FAB2-431B-A65C-FBC40BFA35D9} = {67720584-2001-4906-968A-D0889D28A299}
+		{30B55616-2032-484C-BACE-C7CB341DFF05} = {67720584-2001-4906-968A-D0889D28A299}
 	EndGlobalSection
 EndGlobal
