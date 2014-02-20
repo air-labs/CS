@@ -35,6 +35,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 6 - Рефле
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 6.1 - Рефлексия типов", "Lecture61\Лекция 6.1 - Рефлексия типов.csproj", "{ED6D5943-D50A-479E-AD73-35198EBF671D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 7 - Генерики", "Модуль 7 - Генерики", "{C7320480-3055-4E70-840E-00D1397224DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lecture7.1 - Генерик-коллекции", "Lecture71\Lecture7.1 - Генерик-коллекции.csproj", "{D9EFABEE-DD5B-49FC-9544-72CB3EB6C221}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lecture7.2 - Создание генерик-типа", "Lecture72\Lecture7.2 - Создание генерик-типа.csproj", "{CD6FFF5E-A2DC-48E1-BA16-EF6F72A51750}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lecture7.3 - Генерик-интерфейсы", "Lecture73\Lecture7.3 - Генерик-интерфейсы.csproj", "{6BDBC14A-2B8A-4354-974C-DCC695ED0BA1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +93,18 @@ Global
 		{ED6D5943-D50A-479E-AD73-35198EBF671D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED6D5943-D50A-479E-AD73-35198EBF671D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED6D5943-D50A-479E-AD73-35198EBF671D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9EFABEE-DD5B-49FC-9544-72CB3EB6C221}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9EFABEE-DD5B-49FC-9544-72CB3EB6C221}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9EFABEE-DD5B-49FC-9544-72CB3EB6C221}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9EFABEE-DD5B-49FC-9544-72CB3EB6C221}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD6FFF5E-A2DC-48E1-BA16-EF6F72A51750}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD6FFF5E-A2DC-48E1-BA16-EF6F72A51750}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD6FFF5E-A2DC-48E1-BA16-EF6F72A51750}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD6FFF5E-A2DC-48E1-BA16-EF6F72A51750}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BDBC14A-2B8A-4354-974C-DCC695ED0BA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BDBC14A-2B8A-4354-974C-DCC695ED0BA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BDBC14A-2B8A-4354-974C-DCC695ED0BA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BDBC14A-2B8A-4354-974C-DCC695ED0BA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,5 +122,8 @@ Global
 		{F377FA71-FAB2-431B-A65C-FBC40BFA35D9} = {67720584-2001-4906-968A-D0889D28A299}
 		{30B55616-2032-484C-BACE-C7CB341DFF05} = {67720584-2001-4906-968A-D0889D28A299}
 		{ED6D5943-D50A-479E-AD73-35198EBF671D} = {F81E2AC6-6CFA-49E5-9282-A68ADC61EC41}
+		{D9EFABEE-DD5B-49FC-9544-72CB3EB6C221} = {C7320480-3055-4E70-840E-00D1397224DE}
+		{CD6FFF5E-A2DC-48E1-BA16-EF6F72A51750} = {C7320480-3055-4E70-840E-00D1397224DE}
+		{6BDBC14A-2B8A-4354-974C-DCC695ED0BA1} = {C7320480-3055-4E70-840E-00D1397224DE}
 	EndGlobalSection
 EndGlobal

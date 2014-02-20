@@ -14,7 +14,7 @@ namespace L3S01
 	
 	class Program
 	{
-		public static void MainX()
+		public static void Main()
 		{
 			var type=typeof(Employee);
 			var obj=type.GetConstructor (new Type[0]).Invoke (new object[0]);
