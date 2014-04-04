@@ -1,0 +1,26 @@
+﻿@using Lecture06.Models
+@using System.ComponentModel.DataAnnotations
+@model Enum
+           
+@Html.DropDownListFor(
+m => m,
+Enum.GetValues(Model.GetType())
+.Cast<Enum>()
+.Select(m =>
+{
+    var value = Enum.GetName(Model.GetType(), m);
+    var name = value;
+    try
+    {
+        var memInfo = Model.GetType().GetMember(value.ToString());
+        var attributes = memInfo[0].GetCustomAttributes(typeof(DisplayAttribute), false);
+        name = ((DisplayAttribute)attributes[0]).Name;
+    }
+    catch { }
+    return new SelectListItem()
+    {
+        Selected = (Model.ToString() == value),
+        Text = name,
+        Value = value
+    };
+}))

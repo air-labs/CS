@@ -1,0 +1,6 @@
+﻿@model IEnumerable<Employee>
+
+@foreach (var e in Model)
+{
+    <a href="somewhere.net">@e.FirstName, @e.LastName</a><br />
+}

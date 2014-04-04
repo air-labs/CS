@@ -1,0 +1,16 @@
+﻿@model Lecture06.Models.JobApplication
+
+@{
+    ViewBag.Title = "Index3";
+}
+
+@using(Html.BeginForm())
+{
+    @Html.EditorForModel()
+    <br />
+    <input type="submit" value="Submit" />
+}
+
+<hr />
+
+@Html.DisplayForModel()

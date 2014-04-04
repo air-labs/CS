@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.TextBox("Value")
+    <input type="submit" value="Submit" />
+}
+
+<hr />
+
+@using (Html.BeginForm("Action1", "Post"))
+{
+    <p>@Html.CheckBox("boolean") Булева переменная</p>
+    <p>@Html.RadioButton("color", ConsoleColor.Red) Красный</p>
+    <p>@Html.RadioButton("color", ConsoleColor.Green) Зеленый</p>
+    <input type="submit" value="Submit" />
+}
+
+<hr />
+
+@using (Html.BeginForm("Action2", "Post"))
+{
+    @Html.DropDownList("str", new SelectList(new [] {"A", "B", "C"}), "Choose")
+    <input type="submit" value="Submit" />
+}
+
+<hr />
+
+@using (Html.BeginForm("Action3", "Post"))
+{
+    <p>Имя: @Html.TextBox("Name") </p>
+    <p>Работает: @Html.CheckBox("Staff")</p>
+    <p>Зарплата: @Html.TextBox("Salary")</p>
+    <input type="submit" value="Submit" />
+}
+
+<hr />
+
+@using (Html.BeginForm("Action3", "Post"))
+{
+    <p>Имя: @Html.TextBox("FirstName") </p>
+    <p>Банк: @Html.TextBox("Numbers.INN") </p>
+    <input type="submit" value="Submit" />
+}
+
+

@@ -1,0 +1,27 @@
+﻿@if (false)
+{
+    <script src="../../Scripts/jquery-1.5.1-vsdoc.js" type="text/javascript" />
+}
+
+<p>Текст с <b>полужирной вставкой</b></p>
+<p hide-this="yes">Еще какой-нибудь <b>полужирный</b> текст</p>
+<table border="1" cellspacing="0" cellpadding="10">
+<tr>
+    <td id="test">a11</td>
+    <td>a12</td>
+</tr>
+</table>
+<input type='button' value="comment" />
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        //$('b').css('text-decoration', 'underline');
+        //$('#test').text('new content');
+        //$('tr').prepend('<td>additional cell</td>');
+        $('[hide-this]=yes').hide();
+        //$(':button[value="comment"]').click(function () { alert('!'); });
+
+    });
+
+</script>

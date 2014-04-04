@@ -1,0 +1,13 @@
+﻿@model Lecture08.Models.LogOnViewModel
+
+{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.EditorForModel()
+    <input type="submit" title="Register" />
+}

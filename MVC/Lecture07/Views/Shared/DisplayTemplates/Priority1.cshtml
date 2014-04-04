@@ -1,0 +1,12 @@
+﻿@using Lecture06.Models;
+@model Priority
+           
+@{
+    var colors=new []{ "#aa0000", "#000000", "#00aa00" };
+    var color=colors[(int)Model];
+}
+
+<div style="color: @color;">@Model.ToString()</div>
+           
+
+

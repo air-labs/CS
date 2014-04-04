@@ -1,0 +1,21 @@
+﻿@using Lecture06.Models
+@using System.ComponentModel.DataAnnotations
+@model Enum
+           
+<select id="@ViewData.TemplateInfo.HtmlFieldPrefix" name="@ViewData.TemplateInfo.HtmlFieldPrefix">
+@foreach (var m in Enum.GetValues(Model.GetType()))
+{
+    var value = Enum.GetName(Model.GetType(), m);
+    var name = value;
+    try
+    {
+        var memInfo = Model.GetType().GetMember(value.ToString());
+        var attributes = memInfo[0].GetCustomAttributes(typeof(DisplayAttribute), false);
+        name = ((DisplayAttribute)attributes[0]).Name;
+    }
+    catch { }
+    var selected = "";
+    if (Enum.Equals(m,Model)) { selected = "selected=\"selected\""; }
+    <option value="@value" @selected>@name</option>
+}
+</select>

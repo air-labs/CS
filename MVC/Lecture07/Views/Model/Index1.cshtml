@@ -1,0 +1,21 @@
+﻿@model Lecture06.Models.Employee
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm())
+{
+    <p>Имя: @Html.TextBoxFor(z=>z.Name)</p>
+    <p>Работает в настоящий момент: @Html.CheckBoxFor(z => z.Staff)</p>
+    <p>Желаемая зарплата: @Html.TextBoxFor(z=>z.Salary)</p>
+    <input type="submit" value="Submit" />
+}
+
+<hr />
+
+Имя: @Html.DisplayFor(z=>z.Name) <br />
+Работает в настоящий момент: @Html.DisplayFor(z=>z.Staff) <br />
+Желаемая зарплата: @Html.DisplayFor(z=>z.Salary) <br />
+ИНН: @Html.DisplayFor(z=>z.Numbers.INN) <br />
+<hr />

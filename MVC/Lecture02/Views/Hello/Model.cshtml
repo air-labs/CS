@@ -1,0 +1,18 @@
+﻿@using Lecture01.Models
+@model IEnumerable<Department>
+ 
+
+@{
+    ViewBag.Title = "Model";
+}
+
+<h2>Model</h2>
+@foreach (var dep in Model)
+{
+    <br /><b>@dep.Name</b><br />
+  foreach (var e in dep.Employees)
+  {
+        <i>@e.LastName, @e.FirstName (@e.Salary.ToString("c"))</i>
+  }
+}
+

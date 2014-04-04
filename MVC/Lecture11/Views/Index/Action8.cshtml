@@ -1,0 +1,11 @@
+﻿@model Lecture11.Models.IntArrayHolder
+@using Lecture11.Infrastructure
+
+<h2>Action8</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.TextBoxForArray("FirstArray", Model.FirstArray);
+    @Html.TextBoxForArray("SecondArray", Model.SecondArray);  
+    <input type="submit" />
+}

@@ -1,0 +1,70 @@
+﻿@using Lecture03.Helpers
+
+@{
+    ViewBag.Title = "GET-запросы и маршрутизация";
+}
+
+<h2>GET-запросы</h2>
+@Html.Route("/My/Action1")
+
+@Html.Route("/My/Action2/?id=5")
+
+@Html.Route("/My/Action2")
+
+@Html.Route("/My/Action2/?id=5&cat=Soccer")
+
+@Html.Route("/My/Action3")
+
+@Html.Route("/My/Action3?id=5&cat=Chess")
+
+<h2>Маршрутизация</h2>
+
+<h3>Маршрутизация конкретного адреса</h3>
+
+@Html.Route("/Route1")
+
+<h3>Маршрутизация параметра ID</h3>
+
+@Html.Route("/Route2")
+
+@Html.Route("/Route2/My/Action2")
+
+@Html.Route("/Route2/My/Action2/10")
+
+@Html.Route("/Route2/My/Action3/10?cat=Soccer")
+
+@Html.Route("/Route2/My/Action2/test/")
+
+<h3>Маршрутизация с префиксом и регэкспом</h3>
+
+@Html.Route("/Route3/My/Action3/100/")
+
+@Html.Route("/Route3/My/Action3/Id100/")
+
+@Html.Route("/Route3/My/Action3/Idtest/")
+
+<h3>Маршрутизация с UrlParameter.Optional</h3>
+
+@Html.Route("/Route4/My/Action2/100")
+@Html.Route("/Route4/My/Action2")
+@Html.Route("/Route4/My/Action3")
+
+<h3>Маршрутизация с catch all </h3>
+@Html.Route("/Route5/First/Second/Third")
+
+<h2>Построение URL-адресов</h2>
+
+@Html.ActionLink("MyController.Action1", "Action1", "My") 
+<br />
+
+@Html.ActionLink("MyController.Action2(id=5)", "Action2", "My", new { id = 5 }, null)
+<br />
+
+@Html.ActionLink("MyController.Action2()", "Action2", "My");
+<br />
+
+@Html.ActionLink("MyController.Action2(id=5,cat=Chess)", "Action2", "My", new { id = 5, cat = "Chess" }, null)
+<br />
+
+@Html.ActionLink("MyController.Action4(catchall=First/Second)", "Action4", "My", new { catchall = "First/Second" }, null);
+<br />

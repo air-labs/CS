@@ -1,0 +1,28 @@
+﻿@using Lecture06.Models
+@using System.ComponentModel.DataAnnotations
+@model Status
+
+@Html.DropDownListFor(z=>z,
+        Enum
+            .GetValues(typeof(Status))
+            .Cast<Status>()
+            .Select(value=>
+                {
+                    var name = value.ToString();
+                    try
+                        {
+                        var memInfo = typeof(Status).GetMember(value.ToString());
+                        var attributes = memInfo[0].GetCustomAttributes(typeof(DisplayAttribute), false);
+                        name = ((DisplayAttribute)attributes[0]).Name;
+                        }
+                        catch { }
+
+                    return new SelectListItem
+                        {
+                            Text = name,
+                            Value = value.ToString(),
+                            Selected = value == Model
+                        };
+                }))
+
+            

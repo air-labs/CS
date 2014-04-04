@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>LINQ</h2>
+
+@Html.ActionLink("LINQ to Objects","Index","LINQ")<br />
+@Html.ActionLink("LINQ to Objects, синтаксис псевдоSQL", "Index1", "LINQ")<br />
+
+
+<h2>ADO.NET</h2>
+
+<h3>Присоединенный уровень</h3>
+@Html.ActionLink("Обзор", "ConnectedRead", "DB") <br />
+@Html.ActionLink("Модификация", "ConnectedUpdate", "DB") <br />
+<h3>Отсоединенный уровень</h3>
+@Html.ActionLink("Обзор", "DisconnectedRead", "DB") <br />
+@Html.ActionLink("Модификация", "DisconnectedUpdate", "DB") <br />
+<h3>Entity Framework</h3>
+@Html.ActionLink("Обзор", "EntityRead", "DB") <br />
+@Html.ActionLink("Обзор с Linq", "EntityLinq", "DB") <br />
+@Html.ActionLink("Навигационные свойства", "EntityNavigation", "DB") <br />
+@Html.ActionLink("Модификация","EntityUpdate","DB")<br />
+
+<hr />
+@Html.ActionLink("Очистить базу данных","Clear","DB") <br />

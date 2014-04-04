@@ -1,0 +1,9 @@
+﻿@model IEnumerable<Lecture09.Models.Appointment>
+
+@foreach (var e in Model)
+{
+    <tr>
+    <td>@e.ClientName</td>
+    <td>@e.Date.ToString("dd.MM.yyyy")</td>
+    </tr>
+}

@@ -1,0 +1,22 @@
+﻿@model Lecture06.Models.Employee
+
+@{
+    ViewBag.Title = "Соискатель";
+}
+
+<h2>Соискатель</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.EditorForModel()
+    @Html.EditorFor(z => z.Numbers)
+    <br />
+    <input type="submit" value="Submit" />
+                          
+}   
+<br />
+
+<hr />
+
+@Html.DisplayForModel()
+@Html.DisplayFor(z => z.Numbers)

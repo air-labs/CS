@@ -1,0 +1,26 @@
+﻿@model string 
+@{
+ViewBag.Title = "Index";
+AjaxOptions ajaxOpts = new AjaxOptions { UpdateTargetId="tabledata"};
+}
+
+@using(Ajax.BeginForm("AppointmentData", ajaxOpts))
+{    
+<table>
+        <thead>
+            <th>Клиент</th>
+            <th>Дата</th>
+        </thead>
+        <tbody id="tabledata">
+            @Html.Action("AppointmentData", new { clientName = Model })
+        </tbody>
+    </table>
+<p>
+@Html.DropDownList(
+        "clientName",
+        new SelectList(
+              new[] { "All", "John", "Jane" },
+              Model ?? "All"))
+    <input type="submit" />
+</p>
+}

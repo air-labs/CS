@@ -1,0 +1,15 @@
+﻿@{
+    Layout = "~/Views/Shared/MainLayout.cshtml";
+}
+
+<div id="menu">
+@{Html.RenderAction("EmpList", "Partial");}
+</div>
+<div id="content">
+@RenderSection("Body")
+</div>
+<div id="footer"
+@RenderSection("Footer",false)
+</div>
+</body>
+</html>

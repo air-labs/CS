@@ -1,0 +1,25 @@
+﻿@using Lecture06.Models
+@model Status
+
+@Html.DropDownListFor(z=>z,
+        new []
+        {
+            new SelectListItem
+            {
+                Value=Status.Active.ToString(),
+                Text="Активно",
+                Selected=Status.Active==Model
+            },
+            new SelectListItem
+            {
+                Value=Status.Hidden.ToString(),
+                Text="Скрыто",
+                Selected=Status.Hidden==Model
+            },
+            new SelectListItem
+            {
+                Value=Status.Received.ToString(),
+                Text="Получено",
+                Selected=Status.Received==Model
+            }
+        })

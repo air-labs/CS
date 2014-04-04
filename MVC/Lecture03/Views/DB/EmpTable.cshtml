@@ -1,0 +1,21 @@
+﻿@using Lecture02
+@model IEnumerable<Employee>
+
+@{
+    ViewBag.Title = "EmpTable";
+}
+
+<h2>EmpTable</h2>
+
+<table border="1" cellspacing="0" cellpadding="5">
+@foreach (var e in Model)
+{
+    <tr>
+        <td>@e.Id</td>
+        <td>@e.FirstName</td>
+        <td>@e.LastName</td>
+        <td>@e.Salary</td>
+        <td>@e.DepartmentId</td>
+    </tr>
+}
+

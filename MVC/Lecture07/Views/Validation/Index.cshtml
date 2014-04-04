@@ -1,0 +1,41 @@
+﻿@model Lecture06.Models.Contacts
+
+@{
+    ViewBag.Title = "Контакты";
+}
+
+<h2>Контактная информация</h2>
+
+@if (ViewBag.Correct!= null && ViewBag.Correct)
+{
+    <p>Данные корректны!</p>
+}
+
+@using (Html.BeginForm("Action2","Validation"))
+{
+    @Html.ValidationSummary()
+    <table border=0 cellspacing=5>
+        <tr>
+            <td>Улица</td>
+            <td>@Html.EditorFor(z => z.Street)</td>
+            <td>@Html.ValidationMessageFor(z => z.Street)</td>
+        </tr>
+        <tr>
+            <td>Номер дома</td>
+            <td>@Html.EditorFor(z => z.House)</td>
+            <td>@Html.ValidationMessageFor(z => z.House)</td>
+        </tr>
+        <tr>
+            <td>Телефон</td>
+            <td>@Html.EditorFor(z => z.Phone)</td>
+            <td>@Html.ValidationMessageFor(z => z.Phone)</td>
+        </tr>
+        <tr>
+            <td>Адрес электронной почты</td>
+            <td>@Html.EditorFor(z => z.EMail)</td>
+            <td>@Html.ValidationMessageFor(z => z.EMail)</td>
+        </tr>
+    </table>
+    <input type="submit" value="submit" />
+}
+        

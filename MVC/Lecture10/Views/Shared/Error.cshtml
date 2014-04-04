@@ -1,0 +1,20 @@
+﻿@model HandleErrorInfo
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error</title>
+</head>
+<body>
+    <h2>
+        @Model.Exception.Message
+    </h2>
+    <pre>
+@Model.Exception.StackTrace
+    </pre>
+</body>
+</html>

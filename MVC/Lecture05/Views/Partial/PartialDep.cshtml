@@ -1,0 +1,8 @@
+﻿@model Department
+
+<h3>@Model.Name</h3>
+  
+@foreach (var e in Model.Employees)
+{
+    <i>@e.LastName, @e.FirstName (@e.Salary.ToString("c"))</i><br />   
+}

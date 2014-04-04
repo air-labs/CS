@@ -1,0 +1,15 @@
+﻿@model Lecture11.Models.Employee
+
+@Html.DisplayForModel()
+<hr />
+@using (Html.BeginForm())
+{
+
+    @Html.TextBox("Name",
+        string.Format("{0}{1}{2}",       
+        Model.FirstName??"",
+        Model.FirstName!=null && Model.LastName!=null?" ":"",
+        Model.LastName??""))
+    @Html.EditorFor(z => z.IsManager)<br />
+    <input type="submit" />
+}

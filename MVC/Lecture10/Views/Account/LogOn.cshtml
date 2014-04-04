@@ -1,0 +1,14 @@
+﻿@model Lecture08.Models.LogOnViewModel
+@{
+    ViewBag.Title = "LogOn";
+}
+
+<h2>LogOn</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    @Html.EditorForModel()
+    <br />
+    <input type="submit" value="Log in" />
+}

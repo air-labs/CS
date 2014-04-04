@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@Html.ActionLink("Страница, защищенная MyAuthorize","Secured") <br />
+@Html.ActionLink("Страница, возвращающая исключение","Error") <br />
+@Html.ActionLink("Несуществующая страница","NonExist")<br />
+@Html.ActionLink("Страница с профилированием", "Profile")

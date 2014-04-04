@@ -1,0 +1,9 @@
+﻿@{
+    ViewBag.Title = "Тестирование";
+}
+
+<h2>Тестирование</h2>
+
+@Html.ActionLink("Тестируемый контроллер","Index","Testable") <br />
+@Html.ActionLink("Тестируемый контроллер, запрос 'e'", "Index", "Testable", new { search = "a" }, null)<br />
+@Html.ActionLink("Тестируемый контроллер, запрос 'Admin'", "Index", "Testable", new { search = "Admin" }, null)<br />

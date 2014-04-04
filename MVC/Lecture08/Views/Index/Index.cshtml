@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@Html.ActionLink("Страница, требующая авторизации", "SecuredIndex") <br />
+@Html.ActionLink("Контроллер, требующий авторизации", "Index", "Secured") <br />
+@Html.ActionLink("Страница AdminsOnly", "AdminsOnly") <br />
+@Html.ActionLink("Страница AdminOrManager", "AdminOrManager") <br />
+<br />
+<br />
+@Html.ActionLink("Зарегистрировать пользователя","Register","Admin")
+<br />
+@Html.ActionLink("Выйти из системы", "LogOut", "Account") <br />

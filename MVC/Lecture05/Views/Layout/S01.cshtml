@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Department>
+ 
+@{
+    ViewBag.Title = "Departments";
+}
+
+<h2>Departments</h2>
+
+@foreach (var dep in Model)
+{
+    Html.RenderPartial("PartialDep", dep);
+}
+
+<h2>Details</h2>
+
+@{
+    Html.RenderAction("EmpList","Partial");
+}

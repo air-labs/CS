@@ -1,0 +1,13 @@
+﻿@model Lecture11.Models.Employee
+
+@{
+    ViewBag.Title = "Action2";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.TextBoxFor(z => z.FirstName) <br />
+    @Html.TextBoxFor(z => z.LastName) <br />
+    @Html.DisplayFor(z => z.IsManager) <br />
+    <input type="submit" title="Submit" />
+}

@@ -1,0 +1,10 @@
+﻿@model int
+
+@Html.DropDownListFor(z=>z,
+    new Lecture06.Models.DatabaseEntities().Cities.ToList().Select(
+        z=>new SelectListItem
+        {
+            Value=z.Id.ToString(),
+            Text=z.Name,
+            Selected=Model==z.Id
+        }))

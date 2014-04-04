@@ -1,0 +1,43 @@
+﻿@model string 
+@{
+ViewBag.Title = "Index";
+AjaxOptions ajaxOpts = new AjaxOptions
+    {
+        UpdateTargetId = "tabledata",
+        LoadingElementId = "loading",
+        LoadingElementDuration = 2000,
+        Confirm="Запросить данные?"
+    };
+}
+
+<div id="loading" style="display:none; color:Red; font-weight:bold">
+<p>Loading data</p>
+</div>
+
+
+<table>
+    <thead>
+        <th>Клиент</th>
+        <th>Дата</th>
+    </thead>
+    <tbody id="tabledata">
+        @Html.Action("AppointmentData", new { clientName = Model })
+    </tbody>
+</table>
+
+@foreach (var str in new[] { "All", "John", "Jane" })
+{
+     <div style="margin-right:5px; float:left">
+    @Ajax.ActionLink(
+        str,
+        "AppointmentData",
+        new { clientName = str },
+        new AjaxOptions
+        {
+            UpdateTargetId = "tabledata",
+            LoadingElementId = "loading",
+        })
+    </div>
+}
+
+

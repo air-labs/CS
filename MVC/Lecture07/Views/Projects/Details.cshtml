@@ -1,0 +1,35 @@
+﻿@model Lecture06.Models.Projects
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Projects</legend>
+
+    <div class="display-label">ProjectName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ProjectName)
+    </div>
+
+    <div class="display-label">DueDate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DueDate)
+    </div>
+
+    <div class="display-label">ExpectedIncome</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ExpectedIncome)
+    </div>
+
+    <div class="display-label">Completed</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Completed)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

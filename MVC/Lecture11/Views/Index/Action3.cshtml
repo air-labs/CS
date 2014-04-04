@@ -1,0 +1,8 @@
+﻿@model Lecture11.Models.Employee
+
+@using (Html.BeginForm())
+{
+    @Html.EditorForModel()
+    @Html.EditorFor(z => z.Address)
+    <input type="submit" title="Submit" />
+}

@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Department>
+ 
+@{
+    ViewBag.Title = "Departments";
+    Layout = "~/Views/Shared/Layout01.cshtml";
+}
+
+<h2>Departments</h2>
+
+@foreach (var dep in Model)
+{
+    Html.RenderPartial("PartialDep", dep);
+}
