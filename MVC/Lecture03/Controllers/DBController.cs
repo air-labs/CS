@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlServerCe;
 
 namespace Lecture02.Controllers
 {
@@ -14,7 +15,7 @@ namespace Lecture02.Controllers
 
         public ActionResult ConnectedRead()
         {
-            var connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True;User Instance=True;MultipleActiveResultSets=True");
+            var connection = new SqlCeConnection(@"Data Source=|DataDirectory|\Database.sdf;");
             connection.Open();
             var cmd = connection.CreateCommand();
             cmd.CommandText = "Select * from Employee";
@@ -33,7 +34,7 @@ namespace Lecture02.Controllers
 
         public ActionResult ConnectedUpdate()
         {
-            var connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True;User Instance=True;MultipleActiveResultSets=True");
+            var connection = new SqlCeConnection(@"Data Source=|DataDirectory|\Database.sdf;");
             connection.Open();
             var cmd = connection.CreateCommand();
             cmd.CommandText = "delete from employee where Id=5";
@@ -43,7 +44,7 @@ namespace Lecture02.Controllers
             cmd.Parameters.AddWithValue("@FirstName", "ДЖИМ");
             cmd.ExecuteNonQuery();
 
-            cmd.CommandText = "insert into employee values(100,'ПИТЕР','АБРАМС','100000',NULL)";
+            cmd.CommandText = "insert into employee values(100,'ПИТЕР','АБРАМС','100000','1')";
             cmd.ExecuteNonQuery();
 
             connection.Close();
@@ -52,11 +53,11 @@ namespace Lecture02.Controllers
 
         public ActionResult DisconnectedRead()
         {
-            var connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True;User Instance=True;MultipleActiveResultSets=True");
+            var connection = new SqlCeConnection(@"Data Source=|DataDirectory|\Database.sdf;");
             connection.Open();
             var cmd = connection.CreateCommand();
             cmd.CommandText = "Select * from Employee";
-            var adapter = new SqlDataAdapter(cmd);
+            var adapter = new SqlCeDataAdapter(cmd);
             var set = new DataSet();
             adapter.Fill(set, "Employee");
             connection.Close();
@@ -75,14 +76,14 @@ namespace Lecture02.Controllers
 
         public ActionResult DisconnectedUpdate()
         {
-            var connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True;User Instance=True;MultipleActiveResultSets=True");
+            var connection = new SqlCeConnection(@"Data Source=|DataDirectory|\Database.sdf;");
             connection.Open();
             var cmd = connection.CreateCommand();
             cmd.CommandText = "Select * from Employee";
-            var adapter = new SqlDataAdapter(cmd);
+            var adapter = new SqlCeDataAdapter(cmd);
             var set = new DataSet();
             adapter.Fill(set, "Employee");
-            new SqlCommandBuilder(adapter);
+            new SqlCeCommandBuilder(adapter);
             connection.Close();
 
             var table = set.Tables[0];
@@ -114,7 +115,7 @@ namespace Lecture02.Controllers
         {
             var db = new DatabaseEntities();
 
-            var emps = db.Employee.ToArray();
+            var emps = db.Employees.ToArray();
 
             return View("EmpTable", emps);
         }
@@ -123,7 +124,7 @@ namespace Lecture02.Controllers
         {
             var db = new DatabaseEntities();
 
-            var emps = db.Employee.Where(z => z.Id < 3).ToArray();
+            var emps = db.Employees.Where(z => z.Id < 3).ToArray();
             //var emps = db.Employee.Where(z => z.LastName[0] == 'A').ToArray();
 
 
@@ -134,7 +135,7 @@ namespace Lecture02.Controllers
         public ActionResult EntityNavigation()
         {
             var db = new DatabaseEntities();
-            var dep = db.Department.Where(z => z.Id == 1).First();
+            var dep = db.Departments.Where(z => z.Id == 1).First();
             var emps = dep.Employees.ToArray();
             return View("EmpTable", emps);
         }
@@ -143,11 +144,11 @@ namespace Lecture02.Controllers
         {
             var db = new DatabaseEntities();
 
-            db.Employee.Where(z => z.Id == 1).First().FirstName = "ДЖИМ";
+            db.Employees.Where(z => z.Id == 1).First().FirstName = "ДЖИМ";
 
-            db.DeleteObject(db.Employee.Where(z => z.Id == 5).First());
+            db.Employees.Remove(db.Employees.Where(z => z.Id == 5).First());
 
-            db.Employee.AddObject(new Employee
+            db.Employees.Add(new Employee
             {
                 Id = 100,
                 FirstName = "ПИТЕР",
@@ -165,33 +166,33 @@ namespace Lecture02.Controllers
         {
             var db = new DatabaseEntities();
 
-            foreach (var p in db.Project)
+            foreach (var p in db.Projects)
                 foreach (var e in p.Employees.ToArray())
                     p.Employees.Remove(e);
             db.SaveChanges();
 
-            foreach (var p in db.Project)
-                db.DeleteObject(p);
+            foreach (var p in db.Projects)
+                db.Projects.Remove(p);
             db.SaveChanges();
 
-            foreach (var e in db.Employee)
+            foreach (var e in db.Employees)
                 e.Department = null;
             db.SaveChanges();
 
-            foreach (var d in db.Department)
-                db.DeleteObject(d);
+            foreach (var d in db.Departments)
+                db.Departments.Remove(d);
             db.SaveChanges();
 
-            foreach (var e in db.Employee)
-                db.DeleteObject(e);
-            db.SaveChanges(0);
+            foreach (var e in db.Employees)
+                db.Employees.Remove(e);
+            db.SaveChanges();
 
 
             Employee smith, williams, taylor, stewart;
 
             db = new DatabaseEntities();
 
-            db.Employee.AddObject(smith = new Employee
+            db.Employees.Add(smith = new Employee
             {
                 Id = 1,
                 FirstName = "Джон",
@@ -202,7 +203,7 @@ namespace Lecture02.Controllers
 
 
 
-            db.Employee.AddObject(williams = new Employee
+            db.Employees.Add(williams = new Employee
             {
                 Id = 2,
                 FirstName = "Джейн",
@@ -211,7 +212,7 @@ namespace Lecture02.Controllers
 
             });
 
-            db.Employee.AddObject(taylor = new Employee
+            db.Employees.Add(taylor = new Employee
             {
                 Id = 3,
                 FirstName = "Алекс",
@@ -220,7 +221,7 @@ namespace Lecture02.Controllers
 
             });
 
-            db.Employee.AddObject(stewart = new Employee
+            db.Employees.Add(stewart = new Employee
             {
                 Id = 4,
                 FirstName = "Алиса",
@@ -229,7 +230,7 @@ namespace Lecture02.Controllers
 
             });
 
-            db.Employee.AddObject(new Employee
+            db.Employees.Add(new Employee
             {
                 Id = 5,
                 FirstName = "Стивен",
@@ -240,14 +241,14 @@ namespace Lecture02.Controllers
 
             db.SaveChanges();
 
-            db.Department.AddObject(new Department
+            db.Departments.Add(new Department
             {
                 Id = 1,
                 Name = "Дирекция",
                 Director = smith
             });
 
-            db.Department.AddObject(new Department
+            db.Departments.Add(new Department
             {
                 Id = 2,
                 Name = "Продажи",
@@ -281,8 +282,8 @@ namespace Lecture02.Controllers
             salesReport.Employees.Add(taylor);
             salesReport.Employees.Add(stewart);
 
-            db.Project.AddObject(yearReport);
-            db.Project.AddObject(salesReport);
+            db.Projects.Add(yearReport);
+            db.Projects.Add(salesReport);
             db.SaveChanges();
 
             return "База данных успешно обнулена";

@@ -4,25 +4,25 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DatabaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+      <Schema Namespace="DatabaseModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="DatabaseModelStoreContainer">
-          <EntitySet Name="Department" EntityType="DatabaseModel.Store.Department" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Employee" EntityType="DatabaseModel.Store.Employee" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="EmployeeProject" EntityType="DatabaseModel.Store.EmployeeProject" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Project" EntityType="DatabaseModel.Store.Project" store:Type="Tables" Schema="dbo" />
-          <AssociationSet Name="FK_Department_Director" Association="DatabaseModel.Store.FK_Department_Director">
+          <EntitySet Name="Department" EntityType="DatabaseModel.Store.Department" store:Type="Tables" />
+          <EntitySet Name="Employee" EntityType="DatabaseModel.Store.Employee" store:Type="Tables" />
+          <EntitySet Name="EmployeeProject" EntityType="DatabaseModel.Store.EmployeeProject" store:Type="Tables" />
+          <EntitySet Name="Project" EntityType="DatabaseModel.Store.Project" store:Type="Tables" />
+          <AssociationSet Name="DepartmentDirector" Association="DatabaseModel.Store.DepartmentDirector">
             <End Role="Employee" EntitySet="Employee" />
             <End Role="Department" EntitySet="Department" />
           </AssociationSet>
-          <AssociationSet Name="FK_Employee_Department" Association="DatabaseModel.Store.FK_Employee_Department">
+          <AssociationSet Name="EmployeeDepartment" Association="DatabaseModel.Store.EmployeeDepartment">
             <End Role="Department" EntitySet="Department" />
             <End Role="Employee" EntitySet="Employee" />
           </AssociationSet>
-          <AssociationSet Name="FK_EmployeeProject_Employee" Association="DatabaseModel.Store.FK_EmployeeProject_Employee">
+          <AssociationSet Name="EmployeeToProject" Association="DatabaseModel.Store.EmployeeToProject">
             <End Role="Employee" EntitySet="Employee" />
             <End Role="EmployeeProject" EntitySet="EmployeeProject" />
           </AssociationSet>
-          <AssociationSet Name="FK_EmployeeProject_Project" Association="DatabaseModel.Store.FK_EmployeeProject_Project">
+          <AssociationSet Name="ProjectToEmployee" Association="DatabaseModel.Store.ProjectToEmployee">
             <End Role="Project" EntitySet="Project" />
             <End Role="EmployeeProject" EntitySet="EmployeeProject" />
           </AssociationSet>
@@ -32,18 +32,18 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="Name" Type="varchar(max)" />
-          <Property Name="DirectorId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="200" />
+          <Property Name="DirectorId" Type="int" />
         </EntityType>
         <EntityType Name="Employee">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="FirstName" Type="varchar(max)" />
-          <Property Name="LastName" Type="varchar(max)" />
-          <Property Name="Salary" Type="decimal" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="200" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="200" />
           <Property Name="DepartmentId" Type="int" />
+          <Property Name="Salary" Type="numeric" />
         </EntityType>
         <EntityType Name="EmployeeProject">
           <Key>
@@ -58,22 +58,22 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="Name" Type="varchar(max)" />
-          <Property Name="DueDate" Type="datetime" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="DueDate" Type="datetime" />
         </EntityType>
-        <Association Name="FK_Department_Director">
-          <End Role="Employee" Type="DatabaseModel.Store.Employee" Multiplicity="1" />
-          <End Role="Department" Type="DatabaseModel.Store.Department" Multiplicity="0..1" />
+        <Association Name="DepartmentDirector">
+          <End Role="Employee" Type="DatabaseModel.Store.Employee" Multiplicity="0..1" />
+          <End Role="Department" Type="DatabaseModel.Store.Department" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Employee">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Department">
-              <PropertyRef Name="Id" />
+              <PropertyRef Name="DirectorId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Employee_Department">
+        <Association Name="EmployeeDepartment">
           <End Role="Department" Type="DatabaseModel.Store.Department" Multiplicity="0..1" />
           <End Role="Employee" Type="DatabaseModel.Store.Employee" Multiplicity="*" />
           <ReferentialConstraint>
@@ -85,7 +85,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_EmployeeProject_Employee">
+        <Association Name="EmployeeToProject">
           <End Role="Employee" Type="DatabaseModel.Store.Employee" Multiplicity="1" />
           <End Role="EmployeeProject" Type="DatabaseModel.Store.EmployeeProject" Multiplicity="*" />
           <ReferentialConstraint>
@@ -97,7 +97,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_EmployeeProject_Project">
+        <Association Name="ProjectToEmployee">
           <End Role="Project" Type="DatabaseModel.Store.Project" Multiplicity="1" />
           <End Role="EmployeeProject" Type="DatabaseModel.Store.EmployeeProject" Multiplicity="*" />
           <ReferentialConstraint>
@@ -115,20 +115,20 @@
     <edmx:ConceptualModels>
       <Schema Namespace="DatabaseModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
         <EntityContainer Name="DatabaseEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Department" EntityType="DatabaseModel.Department" />
-          <EntitySet Name="Employee" EntityType="DatabaseModel.Employee" />
-          <EntitySet Name="Project" EntityType="DatabaseModel.Project" />
-          <AssociationSet Name="FK_Department_Director" Association="DatabaseModel.FK_Department_Director">
-            <End Role="Employee" EntitySet="Employee" />
-            <End Role="Department" EntitySet="Department" />
+          <EntitySet Name="Departments" EntityType="DatabaseModel.Department" />
+          <EntitySet Name="Employees" EntityType="DatabaseModel.Employee" />
+          <EntitySet Name="Projects" EntityType="DatabaseModel.Project" />
+          <AssociationSet Name="DepartmentDirector" Association="DatabaseModel.DepartmentDirector">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="Department" EntitySet="Departments" />
           </AssociationSet>
-          <AssociationSet Name="FK_Employee_Department" Association="DatabaseModel.FK_Employee_Department">
-            <End Role="Department" EntitySet="Department" />
-            <End Role="Employee" EntitySet="Employee" />
+          <AssociationSet Name="EmployeeDepartment" Association="DatabaseModel.EmployeeDepartment">
+            <End Role="Department" EntitySet="Departments" />
+            <End Role="Employee" EntitySet="Employees" />
           </AssociationSet>
           <AssociationSet Name="EmployeeProject" Association="DatabaseModel.EmployeeProject">
-            <End Role="Employee" EntitySet="Employee" />
-            <End Role="Project" EntitySet="Project" />
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="Project" EntitySet="Projects" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Department">
@@ -136,21 +136,21 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
-          <Property Name="DirectorId" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Director" Relationship="DatabaseModel.FK_Department_Director" FromRole="Department" ToRole="Employee" />
-          <NavigationProperty Name="Employees" Relationship="DatabaseModel.FK_Employee_Department" FromRole="Department" ToRole="Employee" />
+          <Property Name="Name" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="DirectorId" Type="Int32" />
+          <NavigationProperty Name="Director" Relationship="DatabaseModel.DepartmentDirector" FromRole="Department" ToRole="Employee" />
+          <NavigationProperty Name="Employees" Relationship="DatabaseModel.EmployeeDepartment" FromRole="Department" ToRole="Employee" />
         </EntityType>
         <EntityType Name="Employee">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="FirstName" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
-          <Property Name="LastName" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
-          <Property Name="Salary" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="FirstName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
           <Property Name="DepartmentId" Type="Int32" />
-          <NavigationProperty Name="Department" Relationship="DatabaseModel.FK_Employee_Department" FromRole="Employee" ToRole="Department" />
+          <Property Name="Salary" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="Department" Relationship="DatabaseModel.EmployeeDepartment" FromRole="Employee" ToRole="Department" />
           <NavigationProperty Name="Projects" Relationship="DatabaseModel.EmployeeProject" FromRole="Employee" ToRole="Project" />
         </EntityType>
         <EntityType Name="Project">
@@ -158,23 +158,23 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
-          <Property Name="DueDate" Type="DateTime" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="DueDate" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Employees" Relationship="DatabaseModel.EmployeeProject" FromRole="Project" ToRole="Employee" />
         </EntityType>
-        <Association Name="FK_Department_Director">
-          <End Role="Employee" Type="DatabaseModel.Employee" Multiplicity="1" />
-          <End Role="Department" Type="DatabaseModel.Department" Multiplicity="0..1" />
+        <Association Name="DepartmentDirector">
+          <End Role="Employee" Type="DatabaseModel.Employee" Multiplicity="0..1" />
+          <End Role="Department" Type="DatabaseModel.Department" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Employee">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Department">
-              <PropertyRef Name="Id" />
+              <PropertyRef Name="DirectorId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Employee_Department">
+        <Association Name="EmployeeDepartment">
           <End Role="Department" Type="DatabaseModel.Department" Multiplicity="0..1" />
           <End Role="Employee" Type="DatabaseModel.Employee" Multiplicity="*" />
           <ReferentialConstraint>
@@ -196,23 +196,35 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="DatabaseModelStoreContainer" CdmEntityContainer="DatabaseEntities">
-          <EntitySetMapping Name="Department"><EntityTypeMapping TypeName="DatabaseModel.Department"><MappingFragment StoreEntitySet="Department">
-            <ScalarProperty Name="Id" ColumnName="Id" />
-            <ScalarProperty Name="Name" ColumnName="Name" />
-            <ScalarProperty Name="DirectorId" ColumnName="DirectorId" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Employee"><EntityTypeMapping TypeName="DatabaseModel.Employee"><MappingFragment StoreEntitySet="Employee">
-            <ScalarProperty Name="Id" ColumnName="Id" />
-            <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-            <ScalarProperty Name="LastName" ColumnName="LastName" />
-            <ScalarProperty Name="Salary" ColumnName="Salary" />
-            <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Project"><EntityTypeMapping TypeName="DatabaseModel.Project"><MappingFragment StoreEntitySet="Project">
-            <ScalarProperty Name="Id" ColumnName="Id" />
-            <ScalarProperty Name="Name" ColumnName="Name" />
-            <ScalarProperty Name="DueDate" ColumnName="DueDate" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Departments">
+            <EntityTypeMapping TypeName="DatabaseModel.Department">
+              <MappingFragment StoreEntitySet="Department">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DirectorId" ColumnName="DirectorId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="DatabaseModel.Employee">
+              <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Projects">
+            <EntityTypeMapping TypeName="DatabaseModel.Project">
+              <MappingFragment StoreEntitySet="Project">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <AssociationSetMapping Name="EmployeeProject" TypeName="DatabaseModel.EmployeeProject" StoreEntitySet="EmployeeProject">
             <EndProperty Name="Employee">
               <ScalarProperty Name="Id" ColumnName="EmployeeId" />
@@ -235,29 +247,12 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->
-    <Diagrams>
-      <Diagram Name="Model">
-        <EntityTypeShape EntityType="DatabaseModel.Department" Width="1.5" PointX="3" PointY="1" Height="1.9802864583333335" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.Employee" Width="1.5" PointX="0.75" PointY="2" Height="2.3648893229166656" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.Project" Width="1.5" PointX="3" PointY="3.75" Height="1.787985026041667" IsExpanded="true" />
-        <AssociationConnector Association="DatabaseModel.FK_Department_Director" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="2.6439290364583332" />
-          <ConnectorPoint PointX="3" PointY="2.6439290364583332" />
-        </AssociationConnector>
-        <AssociationConnector Association="DatabaseModel.FK_Employee_Department" ManuallyRouted="false">
-          <ConnectorPoint PointX="3" PointY="2.2594645182291666" />
-          <ConnectorPoint PointX="2.25" PointY="2.2594645182291666" />
-        </AssociationConnector>
-        <AssociationConnector Association="DatabaseModel.EmployeeProject" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="4.0574446614583328" />
-          <ConnectorPoint PointX="3" PointY="4.0574446614583328" />
-        </AssociationConnector>
-      </Diagram>
-    </Diagrams>
+    <Diagrams></Diagrams>
   </Designer>
 </edmx:Edmx>
