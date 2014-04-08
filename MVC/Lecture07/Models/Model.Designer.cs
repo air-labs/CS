@@ -8,15 +8,15 @@
 //------------------------------------------------------------------------------
 
 using System;
+using System.ComponentModel;
+using System.Data.EntityClient;
 using System.Data.Objects;
 using System.Data.Objects.DataClasses;
-using System.Data.EntityClient;
-using System.ComponentModel;
-using System.Xml.Serialization;
+using System.Linq;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 [assembly: EdmSchemaAttribute()]
-
 namespace Lecture06.Models
 {
     #region Contexts
@@ -98,6 +98,7 @@ namespace Lecture06.Models
         private ObjectSet<Cities> _Cities;
 
         #endregion
+
         #region AddTo Methods
     
         /// <summary>
@@ -117,11 +118,11 @@ namespace Lecture06.Models
         }
 
         #endregion
+
     }
-    
 
     #endregion
-    
+
     #region Entities
     
     /// <summary>
@@ -146,6 +147,7 @@ namespace Lecture06.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -200,6 +202,7 @@ namespace Lecture06.Models
         partial void OnNameChanged();
 
         #endregion
+
     
     }
     
@@ -229,6 +232,7 @@ namespace Lecture06.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -355,9 +359,11 @@ namespace Lecture06.Models
         partial void OnCompletedChanged();
 
         #endregion
+
     
     }
 
     #endregion
+
     
 }

@@ -8,12 +8,13 @@
 //------------------------------------------------------------------------------
 
 using System;
+using System.ComponentModel;
+using System.Data.EntityClient;
 using System.Data.Objects;
 using System.Data.Objects.DataClasses;
-using System.Data.EntityClient;
-using System.ComponentModel;
-using System.Xml.Serialization;
+using System.Linq;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
@@ -121,6 +122,7 @@ namespace Lecture02
         private ObjectSet<Project> _Project;
 
         #endregion
+
         #region AddTo Methods
     
         /// <summary>
@@ -148,11 +150,11 @@ namespace Lecture02
         }
 
         #endregion
+
     }
-    
 
     #endregion
-    
+
     #region Entities
     
     /// <summary>
@@ -179,6 +181,7 @@ namespace Lecture02
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -257,6 +260,7 @@ namespace Lecture02
         partial void OnDirectorIdChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -321,6 +325,7 @@ namespace Lecture02
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -347,6 +352,7 @@ namespace Lecture02
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -473,6 +479,7 @@ namespace Lecture02
         partial void OnDepartmentIdChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -537,6 +544,7 @@ namespace Lecture02
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -563,6 +571,7 @@ namespace Lecture02
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -641,6 +650,7 @@ namespace Lecture02
         partial void OnDueDateChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -667,8 +677,10 @@ namespace Lecture02
         }
 
         #endregion
+
     }
 
     #endregion
+
     
 }
