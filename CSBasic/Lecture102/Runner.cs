@@ -10,6 +10,6 @@ class Runner
 {
     public static void Main()
     {
-        Application.Run(new S04());
+        Application.Run(new S05());
     }
 }
