@@ -44,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="S07 - Async и Await.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="S05 - Больше BackgroundWorker.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +62,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="S04 - BackgroundWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="S06 - Task.cs">
       <SubType>Form</SubType>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
