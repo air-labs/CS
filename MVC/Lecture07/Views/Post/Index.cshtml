@@ -32,19 +32,12 @@
 
 @using (Html.BeginForm("Action3", "Post"))
 {
-    <p>Имя: @Html.TextBox("Name") </p>
-    <p>Работает: @Html.CheckBox("Staff")</p>
-    <p>Зарплата: @Html.TextBox("Salary")</p>
+    <p>Автор: @Html.TextBox("Author")</p>
+    <p>Название: @Html.TextBox("BookTitle") </p>
+    <p>Доступна?: @Html.CheckBox("IsAvailable")</p>
     <input type="submit" value="Submit" />
 }
 
-<hr />
 
-@using (Html.BeginForm("Action3", "Post"))
-{
-    <p>Имя: @Html.TextBox("FirstName") </p>
-    <p>Банк: @Html.TextBox("Numbers.INN") </p>
-    <input type="submit" value="Submit" />
-}
 
 

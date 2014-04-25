@@ -34,19 +34,7 @@ namespace Lecture06.Models
 
         public Numbers Numbers { get; set; }
 
-        public override string ToString()
-        {
-            return string.Format(
-@"
-ФИО: {0} <br/> 
-Работает: {1} <br/> 
-Зарплата: {2} <br/>
-ИНН: {3} <br/>",
-                Name,
-                Staff ? "штатный" : "внештатный",
-                Salary.ToString("c"),
-                Numbers.INN);
-        }
+        
 
        
 

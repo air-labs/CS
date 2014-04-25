@@ -33,9 +33,9 @@ namespace Lecture06.Controllers
             return "str: " + str;
         }
 
-        public string Action3(Employee emp)
+        public string Action3(Book book)
         {
-            return emp.ToString();
+            return book.ToString();
         }
     }
 }
