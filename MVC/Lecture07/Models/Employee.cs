@@ -12,7 +12,7 @@ namespace Lecture06.Models
     {
         //[HiddenInput]
         //[HiddenInput(DisplayValue=false)]
-        //[ScaffoldColumn]
+        [ScaffoldColumn(false)]
         public int Id { get; set; }
 
         [Display(Name="Имя и фамилия")]

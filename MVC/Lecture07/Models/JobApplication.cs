@@ -14,7 +14,9 @@ namespace Lecture06.Models
         //[Display(Name="Скрыто")]
         Hidden,
         //[Display(Name="Активно")]
-        Active
+        Active,
+        //[Display(Name="Отклонено")]
+        Rejected
     }
 
     public enum Priority
@@ -32,12 +34,12 @@ namespace Lecture06.Models
     public class JobApplication
     {
     
-        //[UIHint("Enum2")]
+        //[UIHint("Enum1")]
         public Status Status { get; set; }
         //[UIHint("Enum1")]
         public Priority Priority { get; set; }
 
-        [UIHint("City")]
+        //[UIHint("City")]
         public int City { get; set; }
 
         //[Display(Name="Приложение закончено")]

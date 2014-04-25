@@ -24,7 +24,7 @@ namespace Lecture06
             routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}", // URL with parameters
-                new { controller = "Model", action = "Index3" } // Parameter defaults
+                new { controller = "Validation", action = "Index1" } // Parameter defaults
             );
 
         }
