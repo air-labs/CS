@@ -12,14 +12,29 @@ namespace Harmonizer
         public string Guid;
         public string FullName;
         
-        public FileInfo ProjectFile;
-        public bool IsProject { get { return ProjectFile!=null; } }
+        public string InitialProjectFile;
+        public bool IsProject { get { return InitialProjectFile!=null; } }
+        public string InitialProjectFolder;
 
         public string ProperName;
         public bool HasProperName { get { return ProperName != null; } }
 
+        public string TargetName;
+        public string TargetPath;
+        public string TargetProjectFileName;
+        public int Depth;
+
         public List<SlnItem> Items = new List<SlnItem>();
 
-
+        public IEnumerable<SlnItem> Traversal
+        {
+            get
+            {
+                yield return this;
+                foreach (var e in Items)
+                    foreach (var c in e.Traversal)
+                        yield return c;
+            }
+        }
     }
 }

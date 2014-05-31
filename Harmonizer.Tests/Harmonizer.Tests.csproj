@@ -54,7 +54,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Harmonizer\Harmonizer.csproj">
+    <ProjectReference Include="..\Harmonizer\Harmonizer.csproj">
       <Project>{f975ba54-d207-4c65-aa7c-dd4eaaba2106}</Project>
       <Name>Harmonizer</Name>
     </ProjectReference>

@@ -15,7 +15,7 @@ namespace Harmonizer.Tests
             Assert.AreEqual("Лекция 2.3 - Целостность данных и свойства", item.FullName);
             
             Assert.AreEqual(true, item.IsProject);
-            Assert.AreEqual(@"Lecture23\Лекция 2.3 - Целостность данных и свойства.csproj", item.ProjectFile.ToString());
+            Assert.AreEqual(@"Lecture23\Лекция 2.3 - Целостность данных и свойства.csproj", item.InitialProjectFile.ToString());
 
             Assert.AreEqual(true, item.HasProperName);
             Assert.AreEqual("Целостность данных и свойства", item.ProperName);
@@ -46,10 +46,21 @@ namespace Harmonizer.Tests
             Assert.AreEqual("Library", item.FullName);
 
              Assert.AreEqual(true, item.IsProject);
-             Assert.AreEqual(@"Lecture31.Library\Library.csproj", item.ProjectFile.ToString());
+             Assert.AreEqual(@"Lecture31.Library\Library.csproj", item.InitialProjectFile.ToString());
 
 
              Assert.AreEqual(false, item.HasProperName);
+        }
+
+        [TestMethod]
+        public void TryConnection()
+        {
+            var con = SlnFileReader.ParseConnection("{2D7B26C6-C786-4CE9-8442-F711C493917C} = {351394E1-F128-4725-BD62-DB03992E9757}");
+
+            Assert.AreEqual("2D7B26C6-C786-4CE9-8442-F711C493917C", con.Item1);
+            Assert.AreEqual("351394E1-F128-4725-BD62-DB03992E9757", con.Item2);
+
+
         }
     }
 }
