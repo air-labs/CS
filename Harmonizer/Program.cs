@@ -12,10 +12,18 @@ namespace Harmonizer
 
         static string[] Names = new string[] { "Модуль", "Лекция" };
 
+        class SlnItemComparer : Comparer<SlnItem>
+        {
+
+            public override int Compare(SlnItem x, SlnItem y)
+            {
+                return x.FullName.CompareTo(y.FullName);
+            }
+        }
+
         static void Assign(SlnItem item)
         {
-           
-
+            item.Items.Sort(new SlnItemComparer());
             for (int i = 0; i < item.Items.Count; i++)
             {
                 var e = item.Items[i];

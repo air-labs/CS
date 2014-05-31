@@ -75,7 +75,7 @@ Global
 	EndGlobalSection");
 
                writer.WriteLine(@"
-GlobalSection(NestedProjects) = preSolution");
+    GlobalSection(NestedProjects) = preSolution");
 
                foreach (var e in root.Traversal.Skip(1))
                    foreach (var m in e.Items)
