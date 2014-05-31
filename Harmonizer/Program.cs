@@ -27,10 +27,10 @@ namespace Harmonizer
                 else
                     e.TargetName = e.FullName;
 
-                e.TargetPath = item.TargetPath + "\\" + e.TargetName;
+                e.TargetPath = item.TargetPath + e.TargetName +"\\";
 
                 if (e.IsProject)
-                    e.TargetProjectFileName = e.TargetPath + "\\" + e.TargetName + ".csproj";
+                    e.TargetProjectFileName = e.TargetPath + e.TargetName + ".csproj";
 
                 Assign(e);
             }
@@ -47,7 +47,7 @@ namespace Harmonizer
         }
 
         static string SlnFileName = "..\\..\\..\\CSBasic\\CS.sln";
-        static string RootFolder=".\\Temp";
+        static string RootFolder=".\\Temp\\";
         static string SlnFolder;
 
         public static void CrateSubdirectories(SlnItem item)
@@ -82,6 +82,8 @@ namespace Harmonizer
                 MoveFiles(
                     new DirectoryInfo(SlnFolder+e.InitialProjectFolder),
                     new DirectoryInfo(RootFolder + e.TargetPath));
+                if (e.HasProperName)
+                    File.Move(RootFolder + e.TargetPath + e.InitialProjectFileName, RootFolder + e.TargetProjectFileName);
             }
         }
         
@@ -99,7 +101,7 @@ namespace Harmonizer
             CrateSubdirectories(root);
             CopyProjects(root);
 
-            SlnFileReader.WriteSlnFile(SlnFolder + file.Name, root);
+            SlnFileReader.WriteSlnFile(RootFolder + "\\"+ file.Name, root);
         }
     }
 }

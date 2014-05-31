@@ -18,11 +18,12 @@ namespace Harmonizer
             result.Guid = match.Groups[4].Value;
             if (match.Groups[3].Value.EndsWith(".csproj"))
             {
-                result.InitialProjectFile = match.Groups[3].Value;
-                result.InitialProjectFolder = result.InitialProjectFile.Substring(0, result.InitialProjectFile.LastIndexOf("\\"));
+                result.InitialProjectFilePath = match.Groups[3].Value;
+                result.InitialProjectFolder = result.InitialProjectFilePath.Substring(0, result.InitialProjectFilePath.LastIndexOf("\\"));
+                result.InitialProjectFileName = result.InitialProjectFilePath.Substring(result.InitialProjectFolder.Length, result.InitialProjectFilePath.Length - result.InitialProjectFolder.Length);
             }
             result.FullName = match.Groups[2].Value;
-
+            result.ProjectTypeGuid = match.Groups[1].Value;
             regex = new Regex("[^-]* - (.*)");
             match = regex.Match(result.FullName);
             if (match.Success)
@@ -43,7 +44,7 @@ namespace Harmonizer
 
        public static void WriteSlnFile(string filename, SlnItem root)
        {
-           using (var writer = new StreamWriter(filename))
+           using (var writer = new StreamWriter(filename,false,Encoding.UTF8))
            {
                writer.WriteLine(@"               
 Microsoft Visual Studio Solution File, Format Version 12.00
@@ -53,7 +54,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
                {
                    writer.WriteLine(@"Project(""{{{0}}}"") = ""{1}"", ""{2}"", ""{{{3}}}""
 EndProject",
-           Guid.NewGuid().ToString(),
+           e.ProjectTypeGuid,
            e.TargetName,
            e.TargetProjectFileName ?? e.TargetName,
            e.Guid);

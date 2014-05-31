@@ -15,7 +15,7 @@ namespace Harmonizer.Tests
             Assert.AreEqual("Лекция 2.3 - Целостность данных и свойства", item.FullName);
             
             Assert.AreEqual(true, item.IsProject);
-            Assert.AreEqual(@"Lecture23\Лекция 2.3 - Целостность данных и свойства.csproj", item.InitialProjectFile.ToString());
+            Assert.AreEqual(@"Lecture23\Лекция 2.3 - Целостность данных и свойства.csproj", item.InitialProjectFilePath.ToString());
 
             Assert.AreEqual(true, item.HasProperName);
             Assert.AreEqual("Целостность данных и свойства", item.ProperName);
@@ -46,7 +46,7 @@ namespace Harmonizer.Tests
             Assert.AreEqual("Library", item.FullName);
 
              Assert.AreEqual(true, item.IsProject);
-             Assert.AreEqual(@"Lecture31.Library\Library.csproj", item.InitialProjectFile.ToString());
+             Assert.AreEqual(@"Lecture31.Library\Library.csproj", item.InitialProjectFilePath.ToString());
 
 
              Assert.AreEqual(false, item.HasProperName);

@@ -11,10 +11,12 @@ namespace Harmonizer
     {
         public string Guid;
         public string FullName;
+        public string ProjectTypeGuid;
         
-        public string InitialProjectFile;
-        public bool IsProject { get { return InitialProjectFile!=null; } }
+        public string InitialProjectFilePath;
+        public bool IsProject { get { return InitialProjectFilePath!=null; } }
         public string InitialProjectFolder;
+        public string InitialProjectFileName;
 
         public string ProperName;
         public bool HasProperName { get { return ProperName != null; } }
