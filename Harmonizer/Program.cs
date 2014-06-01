@@ -123,7 +123,7 @@ namespace Harmonizer
 
             root.Items.Clear();
             root.Items.AddRange(items);
-            SlnFileReader.WriteSlnFile(TargetRoot + "\\"+ file.Name, root);
+            SlnFileReader.WriteSlnFile(Path.Combine(SourceRoot,file.Name), root);
         }
     }
 }
