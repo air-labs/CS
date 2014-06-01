@@ -1,71 +1,71 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 2.1 - Классы и структуры", "Lecture21\Лекция 2.1 - Классы и структуры.csproj", "{A6C5C824-2B01-4100-AB8C-4CB50F4A252C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 01 - Инкапсуляция", "Модуль 01 - Инкапсуляция", "{351394E1-F128-4725-BD62-DB03992E9757}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 2.2 - Методы", "Lecture22\Лекция 2.2 - Методы.csproj", "{2D7B26C6-C786-4CE9-8442-F711C493917C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 01 - Классы и структуры", "Модуль 01 - Инкапсуляция\Лекция 01 - Классы и структуры\Лекция 01 - Классы и структуры.csproj", "{A6C5C824-2B01-4100-AB8C-4CB50F4A252C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 02 - Инкапсуляция", "Модуль 02 - Инкапсуляция", "{351394E1-F128-4725-BD62-DB03992E9757}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 02 - Методы", "Модуль 01 - Инкапсуляция\Лекция 02 - Методы\Лекция 02 - Методы.csproj", "{2D7B26C6-C786-4CE9-8442-F711C493917C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 2.3 - Целостность данных и свойства", "Lecture23\Лекция 2.3 - Целостность данных и свойства.csproj", "{9BFD2B59-C5F6-4C54-BA0C-3FCE63076FF3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 03 - Целостность данных и свойства", "Модуль 01 - Инкапсуляция\Лекция 03 - Целостность данных и свойства\Лекция 03 - Целостность данных и свойства.csproj", "{9BFD2B59-C5F6-4C54-BA0C-3FCE63076FF3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 03 - Автоматическое тестирование", "Модуль 03 - Автоматическое тестирование", "{90895662-C9A5-485F-AAAC-BB84EC07B8B9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 02 - Автоматическое тестирование", "Модуль 02 - Автоматическое тестирование", "{90895662-C9A5-485F-AAAC-BB84EC07B8B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "Lecture31.Library\Library.csproj", "{0F31E012-294C-419F-B7C4-DB055B047E6F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Лекция 01 - Функциональные и модульные тесты", "Лекция 01 - Функциональные и модульные тесты", "{BD5C9724-C623-4942-AB84-9C39DF06F8F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runner", "Lecture31.Runner\Runner.csproj", "{B6687AD5-3CE2-46F4-99E3-84DEE85F8503}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "Модуль 02 - Автоматическое тестирование\Лекция 01 - Функциональные и модульные тесты\Library\Library.csproj", "{0F31E012-294C-419F-B7C4-DB055B047E6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Lecture31.Tests\Tests.csproj", "{5A30DA47-5724-497A-96E2-9C4331D1AC4A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runner", "Модуль 02 - Автоматическое тестирование\Лекция 01 - Функциональные и модульные тесты\Runner\Runner.csproj", "{B6687AD5-3CE2-46F4-99E3-84DEE85F8503}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Лекция 3.1 - Функциональные и модульные тесты", "Лекция 3.1 - Функциональные и модульные тесты", "{BD5C9724-C623-4942-AB84-9C39DF06F8F6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Модуль 02 - Автоматическое тестирование\Лекция 01 - Функциональные и модульные тесты\Tests\Tests.csproj", "{5A30DA47-5724-497A-96E2-9C4331D1AC4A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 04 - Файлы и ресурсы", "Модуль 04 - Файлы и ресурсы", "{871BDCE4-095A-464A-914A-AA26209E1C12}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 03 - Файлы и ресурсы", "Модуль 03 - Файлы и ресурсы", "{871BDCE4-095A-464A-914A-AA26209E1C12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 4.1 - Файлы", "Lecture41\Лекция 4.1 - Файлы.csproj", "{19C7870C-0112-458F-84C6-3A73D1F65BC7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 01 - Файлы", "Модуль 03 - Файлы и ресурсы\Лекция 01 - Файлы\Лекция 01 - Файлы.csproj", "{19C7870C-0112-458F-84C6-3A73D1F65BC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 4.2 - Управление памятью", "Lecture42\Лекция 4.2 - Управление памятью.csproj", "{168B899F-5623-4554-AA91-260C4A46B202}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 02 - Управление памятью", "Модуль 03 - Файлы и ресурсы\Лекция 02 - Управление памятью\Лекция 02 - Управление памятью.csproj", "{168B899F-5623-4554-AA91-260C4A46B202}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 05 - Наследование и полиморфизм", "Модуль 05 - Наследование и полиморфизм", "{67720584-2001-4906-968A-D0889D28A299}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 04 - Наследование и полиморфизм", "Модуль 04 - Наследование и полиморфизм", "{67720584-2001-4906-968A-D0889D28A299}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 5.1. - Интерфейсы", "Lecture51\Лекция 5.1. - Интерфейсы.csproj", "{F377FA71-FAB2-431B-A65C-FBC40BFA35D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 01 - Интерфейсы", "Модуль 04 - Наследование и полиморфизм\Лекция 01 - Интерфейсы\Лекция 01 - Интерфейсы.csproj", "{F377FA71-FAB2-431B-A65C-FBC40BFA35D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 5.2. - Базовые классы", "Lecture52\Лекция 5.2. - Базовые классы.csproj", "{30B55616-2032-484C-BACE-C7CB341DFF05}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 02 - Базовые классы", "Модуль 04 - Наследование и полиморфизм\Лекция 02 - Базовые классы\Лекция 02 - Базовые классы.csproj", "{30B55616-2032-484C-BACE-C7CB341DFF05}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 06 - Рефлексия типов", "Модуль 06 - Рефлексия типов", "{F81E2AC6-6CFA-49E5-9282-A68ADC61EC41}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 05 - Рефлексия типов", "Модуль 05 - Рефлексия типов", "{F81E2AC6-6CFA-49E5-9282-A68ADC61EC41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 6.1 - Рефлексия типов", "Lecture61\Лекция 6.1 - Рефлексия типов.csproj", "{ED6D5943-D50A-479E-AD73-35198EBF671D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 01 - Рефлексия типов", "Модуль 05 - Рефлексия типов\Лекция 01 - Рефлексия типов\Лекция 01 - Рефлексия типов.csproj", "{ED6D5943-D50A-479E-AD73-35198EBF671D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 07 - Генерики", "Модуль 07 - Генерики", "{C7320480-3055-4E70-840E-00D1397224DE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 06 - Генерики", "Модуль 06 - Генерики", "{C7320480-3055-4E70-840E-00D1397224DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lecture7.1 - Генерик-коллекции", "Lecture71\Lecture7.1 - Генерик-коллекции.csproj", "{D9EFABEE-DD5B-49FC-9544-72CB3EB6C221}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 01 - Генерик-коллекции", "Модуль 06 - Генерики\Лекция 01 - Генерик-коллекции\Лекция 01 - Генерик-коллекции.csproj", "{D9EFABEE-DD5B-49FC-9544-72CB3EB6C221}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lecture7.2 - Создание генерик-типа", "Lecture72\Lecture7.2 - Создание генерик-типа.csproj", "{CD6FFF5E-A2DC-48E1-BA16-EF6F72A51750}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 02 - Создание генерик-типа", "Модуль 06 - Генерики\Лекция 02 - Создание генерик-типа\Лекция 02 - Создание генерик-типа.csproj", "{CD6FFF5E-A2DC-48E1-BA16-EF6F72A51750}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lecture7.3 - Генерик-интерфейсы", "Lecture73\Lecture7.3 - Генерик-интерфейсы.csproj", "{6BDBC14A-2B8A-4354-974C-DCC695ED0BA1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 03 - Генерик-интерфейсы", "Модуль 06 - Генерики\Лекция 03 - Генерик-интерфейсы\Лекция 03 - Генерик-интерфейсы.csproj", "{6BDBC14A-2B8A-4354-974C-DCC695ED0BA1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 08 - Делегаты и события", "Модуль 08 - Делегаты и события", "{970ED5B7-848E-4A64-818F-2B7B24F0F7C3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 07 - Делегаты и события", "Модуль 07 - Делегаты и события", "{970ED5B7-848E-4A64-818F-2B7B24F0F7C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 8.1 - Делегаты", "Lecture81\Лекция 8.1 - Делегаты.csproj", "{DACAB07D-1C35-4437-97EA-FFB10E0A70F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 01 - Делегаты", "Модуль 07 - Делегаты и события\Лекция 01 - Делегаты\Лекция 01 - Делегаты.csproj", "{DACAB07D-1C35-4437-97EA-FFB10E0A70F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 8.2 - События", "Lecture82\Лекция 8.2 - События.csproj", "{15B6560D-A7D4-4E9D-BE92-240C89AC8048}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 02 - События", "Модуль 07 - Делегаты и события\Лекция 02 - События\Лекция 02 - События.csproj", "{15B6560D-A7D4-4E9D-BE92-240C89AC8048}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 8.3 - Windows Forms", "Lecture83\Лекция 8.3 - Windows Forms.csproj", "{F00B62DC-733D-4F7E-A5A8-1E13280E37E0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 03 - Windows Forms", "Модуль 07 - Делегаты и события\Лекция 03 - Windows Forms\Лекция 03 - Windows Forms.csproj", "{F00B62DC-733D-4F7E-A5A8-1E13280E37E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 8.4 - LINQ Expressions", "Lecture84\Лекция 8.4 - LINQ Expressions.csproj", "{548A0FCB-36BD-4721-9884-B3FC52707364}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 04 - LINQ Expressions", "Модуль 07 - Делегаты и события\Лекция 04 - LINQ Expressions\Лекция 04 - LINQ Expressions.csproj", "{548A0FCB-36BD-4721-9884-B3FC52707364}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 09 - LINQ", "Модуль 09 - LINQ", "{9C860D8E-15C9-4615-9EE7-568CA8A3C86D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 08 - LINQ", "Модуль 08 - LINQ", "{9C860D8E-15C9-4615-9EE7-568CA8A3C86D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 9.1 - Перечислимые типы", "Lecture91\Лекция 9.1 - Перечислимые типы.csproj", "{C5246FD9-8046-4428-91DF-D3D1116C2FD6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 01 - Перечислимые типы", "Модуль 08 - LINQ\Лекция 01 - Перечислимые типы\Лекция 01 - Перечислимые типы.csproj", "{C5246FD9-8046-4428-91DF-D3D1116C2FD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 9.2 - LINQ", "Lecture92\Лекция 9.2 - LINQ.csproj", "{D6079D66-64B2-4A09-99BF-E07C15BF8101}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 02 - LINQ", "Модуль 08 - LINQ\Лекция 02 - LINQ\Лекция 02 - LINQ.csproj", "{D6079D66-64B2-4A09-99BF-E07C15BF8101}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{43D780AA-642B-4D21-B6B2-F3C0390A7973}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 09 - Параллельное программирование", "Модуль 09 - Параллельное программирование", "{64AED2CC-C242-4655-A19C-817675BE634E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 10 - Параллельное программирование", "Модуль 10 - Параллельное программирование", "{64AED2CC-C242-4655-A19C-817675BE634E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 10.2 - Асинхронное программирование интерфейсов", "Lecture102\Лекция 10.2 - Асинхронное программирование интерфейсов.csproj", "{0BE18144-8243-4472-A62C-67B7FCB410B8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 01 - Асинхронное программирование интерфейсов", "Модуль 09 - Параллельное программирование\Лекция 01 - Асинхронное программирование интерфейсов\Лекция 01 - Асинхронное программирование интерфейсов.csproj", "{0BE18144-8243-4472-A62C-67B7FCB410B8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{B0CDCB11-D0EA-4C93-A64E-128EBB4E5277}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{43D780AA-642B-4D21-B6B2-F3C0390A7973}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harmonizer", "..\Harmonizer\Harmonizer.csproj", "{F975BA54-D207-4C65-AA7C-DD4EAABA2106}"
 EndProject
@@ -281,16 +281,6 @@ Global
 		{D6079D66-64B2-4A09-99BF-E07C15BF8101}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{D6079D66-64B2-4A09-99BF-E07C15BF8101}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{D6079D66-64B2-4A09-99BF-E07C15BF8101}.Release|x86.ActiveCfg = Release|Any CPU
-		{43D780AA-642B-4D21-B6B2-F3C0390A7973}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{43D780AA-642B-4D21-B6B2-F3C0390A7973}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{43D780AA-642B-4D21-B6B2-F3C0390A7973}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{43D780AA-642B-4D21-B6B2-F3C0390A7973}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{43D780AA-642B-4D21-B6B2-F3C0390A7973}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{43D780AA-642B-4D21-B6B2-F3C0390A7973}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{43D780AA-642B-4D21-B6B2-F3C0390A7973}.Release|Any CPU.Build.0 = Release|Any CPU
-		{43D780AA-642B-4D21-B6B2-F3C0390A7973}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{43D780AA-642B-4D21-B6B2-F3C0390A7973}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{43D780AA-642B-4D21-B6B2-F3C0390A7973}.Release|x86.ActiveCfg = Release|Any CPU
 		{0BE18144-8243-4472-A62C-67B7FCB410B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0BE18144-8243-4472-A62C-67B7FCB410B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BE18144-8243-4472-A62C-67B7FCB410B8}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -301,6 +291,16 @@ Global
 		{0BE18144-8243-4472-A62C-67B7FCB410B8}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{0BE18144-8243-4472-A62C-67B7FCB410B8}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{0BE18144-8243-4472-A62C-67B7FCB410B8}.Release|x86.ActiveCfg = Release|Any CPU
+		{43D780AA-642B-4D21-B6B2-F3C0390A7973}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43D780AA-642B-4D21-B6B2-F3C0390A7973}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43D780AA-642B-4D21-B6B2-F3C0390A7973}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{43D780AA-642B-4D21-B6B2-F3C0390A7973}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{43D780AA-642B-4D21-B6B2-F3C0390A7973}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{43D780AA-642B-4D21-B6B2-F3C0390A7973}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43D780AA-642B-4D21-B6B2-F3C0390A7973}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43D780AA-642B-4D21-B6B2-F3C0390A7973}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{43D780AA-642B-4D21-B6B2-F3C0390A7973}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{43D780AA-642B-4D21-B6B2-F3C0390A7973}.Release|x86.ActiveCfg = Release|Any CPU
 		{F975BA54-D207-4C65-AA7C-DD4EAABA2106}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F975BA54-D207-4C65-AA7C-DD4EAABA2106}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F975BA54-D207-4C65-AA7C-DD4EAABA2106}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -326,13 +326,13 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{2D7B26C6-C786-4CE9-8442-F711C493917C} = {351394E1-F128-4725-BD62-DB03992E9757}
 		{A6C5C824-2B01-4100-AB8C-4CB50F4A252C} = {351394E1-F128-4725-BD62-DB03992E9757}
+		{2D7B26C6-C786-4CE9-8442-F711C493917C} = {351394E1-F128-4725-BD62-DB03992E9757}
 		{9BFD2B59-C5F6-4C54-BA0C-3FCE63076FF3} = {351394E1-F128-4725-BD62-DB03992E9757}
 		{BD5C9724-C623-4942-AB84-9C39DF06F8F6} = {90895662-C9A5-485F-AAAC-BB84EC07B8B9}
+		{0F31E012-294C-419F-B7C4-DB055B047E6F} = {BD5C9724-C623-4942-AB84-9C39DF06F8F6}
 		{B6687AD5-3CE2-46F4-99E3-84DEE85F8503} = {BD5C9724-C623-4942-AB84-9C39DF06F8F6}
 		{5A30DA47-5724-497A-96E2-9C4331D1AC4A} = {BD5C9724-C623-4942-AB84-9C39DF06F8F6}
-		{0F31E012-294C-419F-B7C4-DB055B047E6F} = {BD5C9724-C623-4942-AB84-9C39DF06F8F6}
 		{19C7870C-0112-458F-84C6-3A73D1F65BC7} = {871BDCE4-095A-464A-914A-AA26209E1C12}
 		{168B899F-5623-4554-AA91-260C4A46B202} = {871BDCE4-095A-464A-914A-AA26209E1C12}
 		{F377FA71-FAB2-431B-A65C-FBC40BFA35D9} = {67720584-2001-4906-968A-D0889D28A299}

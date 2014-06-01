@@ -56,7 +56,7 @@
     <Compile Include="S01 - модульный тест.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Lecture31.Library\Library.csproj">
+    <ProjectReference Include="..\Library\Library.csproj">
       <Project>{0f31e012-294c-419f-b7c4-db055b047e6f}</Project>
       <Name>Library</Name>
     </ProjectReference>
