@@ -119,7 +119,10 @@ namespace Harmonizer
             CopyProjects(root);
             DeleteOldSubdirectories(root);
             file.Delete();
+            MoveFiles(new DirectoryInfo(TargetRoot), new DirectoryInfo(SourceRoot));
 
+            root.Items.Clear();
+            root.Items.AddRange(items);
             SlnFileReader.WriteSlnFile(TargetRoot + "\\"+ file.Name, root);
         }
     }
