@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Index3";
+}
+
+<h2>Index3</h2>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $('#Floor').change(function () {
+            $.ajax({
+                url: '@Url.Action("GetRooms")'+'?floor='+$('#Floor').val(),
+
+                type: 'GET',
+                success: function (response) {
+                    $('#Rooms').html(response);
+                    $('#Rooms').val([]);
+                }
+            })
+        });
+
+    });
+
+</script>
+
+<select id="Floor">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+</select>
+
+<select id="Rooms">
+</select>

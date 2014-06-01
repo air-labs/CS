@@ -23,6 +23,5 @@ namespace Lecture06.Models
         public string EMail { get; set; }
         [PhoneValiator(ErrorMessage = "Неверный формат телефона")]
         public string Phone { get; set; }
-        
     }
 }

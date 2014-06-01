@@ -1,0 +1,33 @@
+﻿@if (false)
+{
+    <script src="../../Scripts/jquery-1.5.1-vsdoc.js" type="text/javascript" />
+}
+
+@{
+    ViewBag.Title = "Index2";
+}
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        //$('#addRow').click(function () {
+        //    $('#Values').prepend('<tr><td>Test</td></tr>');
+        //});
+
+        $('#addRow').click(function () {
+            $.ajax({
+                url: '@Url.Action("AjaxAction")',
+                type: 'GET',
+                success: function (response) {
+                    $('#Values').prepend(response);
+                }
+            })
+        });
+
+    });
+
+</script>
+
+<input type="button" id="addRow" value="Click me" />
+
+<table id="Values"></table>

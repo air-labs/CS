@@ -12,7 +12,7 @@ namespace Lecture06.Models
     {
         //[HiddenInput]
         //[HiddenInput(DisplayValue=false)]
-        //[ScaffoldColumn]
+        [ScaffoldColumn(false)]
         public int Id { get; set; }
 
         [Display(Name="Имя и фамилия")]
@@ -34,19 +34,7 @@ namespace Lecture06.Models
 
         public Numbers Numbers { get; set; }
 
-        public override string ToString()
-        {
-            return string.Format(
-@"
-ФИО: {0} <br/> 
-Работает: {1} <br/> 
-Зарплата: {2} <br/>
-ИНН: {3} <br/>",
-                Name,
-                Staff ? "штатный" : "внештатный",
-                Salary.ToString("c"),
-                Numbers.INN);
-        }
+        
 
        
 

@@ -5,11 +5,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 2.1 - Клас
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 2.2 - Методы", "Lecture22\Лекция 2.2 - Методы.csproj", "{2D7B26C6-C786-4CE9-8442-F711C493917C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 2 - Инкапсуляция", "Модуль 2 - Инкапсуляция", "{351394E1-F128-4725-BD62-DB03992E9757}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 02 - Инкапсуляция", "Модуль 02 - Инкапсуляция", "{351394E1-F128-4725-BD62-DB03992E9757}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 2.3 - Целостность данных и свойства", "Lecture23\Лекция 2.3 - Целостность данных и свойства.csproj", "{9BFD2B59-C5F6-4C54-BA0C-3FCE63076FF3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 3 - Автоматическое тестирование", "Модуль 3 - Автоматическое тестирование", "{90895662-C9A5-485F-AAAC-BB84EC07B8B9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 03 - Автоматическое тестирование", "Модуль 03 - Автоматическое тестирование", "{90895662-C9A5-485F-AAAC-BB84EC07B8B9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "Lecture31.Library\Library.csproj", "{0F31E012-294C-419F-B7C4-DB055B047E6F}"
 EndProject
@@ -19,23 +19,23 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Lecture31.Tests\Te
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Лекция 3.1 - Функциональные и модульные тесты", "Лекция 3.1 - Функциональные и модульные тесты", "{BD5C9724-C623-4942-AB84-9C39DF06F8F6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 4 - Файлы и ресурсы", "Модуль 4 - Файлы и ресурсы", "{871BDCE4-095A-464A-914A-AA26209E1C12}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 04 - Файлы и ресурсы", "Модуль 04 - Файлы и ресурсы", "{871BDCE4-095A-464A-914A-AA26209E1C12}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 4.1 - Файлы", "Lecture41\Лекция 4.1 - Файлы.csproj", "{19C7870C-0112-458F-84C6-3A73D1F65BC7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 4.2 - Управление памятью", "Lecture42\Лекция 4.2 - Управление памятью.csproj", "{168B899F-5623-4554-AA91-260C4A46B202}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 5 - Наследование и полиморфизм", "Модуль 5 - Наследование и полиморфизм", "{67720584-2001-4906-968A-D0889D28A299}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 05 - Наследование и полиморфизм", "Модуль 05 - Наследование и полиморфизм", "{67720584-2001-4906-968A-D0889D28A299}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 5.1. - Интерфейсы", "Lecture51\Лекция 5.1. - Интерфейсы.csproj", "{F377FA71-FAB2-431B-A65C-FBC40BFA35D9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 5.2. - Базовые классы", "Lecture52\Лекция 5.2. - Базовые классы.csproj", "{30B55616-2032-484C-BACE-C7CB341DFF05}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 6 - Рефлексия типов", "Модуль 6 - Рефлексия типов", "{F81E2AC6-6CFA-49E5-9282-A68ADC61EC41}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 06 - Рефлексия типов", "Модуль 06 - Рефлексия типов", "{F81E2AC6-6CFA-49E5-9282-A68ADC61EC41}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 6.1 - Рефлексия типов", "Lecture61\Лекция 6.1 - Рефлексия типов.csproj", "{ED6D5943-D50A-479E-AD73-35198EBF671D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 7 - Генерики", "Модуль 7 - Генерики", "{C7320480-3055-4E70-840E-00D1397224DE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 07 - Генерики", "Модуль 07 - Генерики", "{C7320480-3055-4E70-840E-00D1397224DE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lecture7.1 - Генерик-коллекции", "Lecture71\Lecture7.1 - Генерик-коллекции.csproj", "{D9EFABEE-DD5B-49FC-9544-72CB3EB6C221}"
 EndProject
@@ -43,7 +43,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lecture7.2 - Создани
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lecture7.3 - Генерик-интерфейсы", "Lecture73\Lecture7.3 - Генерик-интерфейсы.csproj", "{6BDBC14A-2B8A-4354-974C-DCC695ED0BA1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 8 - Делегаты и события", "Модуль 8 - Делегаты и события", "{970ED5B7-848E-4A64-818F-2B7B24F0F7C3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 08 - Делегаты и события", "Модуль 08 - Делегаты и события", "{970ED5B7-848E-4A64-818F-2B7B24F0F7C3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 8.1 - Делегаты", "Lecture81\Лекция 8.1 - Делегаты.csproj", "{DACAB07D-1C35-4437-97EA-FFB10E0A70F2}"
 EndProject
@@ -53,7 +53,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 8.3 - Windows 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 8.4 - LINQ Expressions", "Lecture84\Лекция 8.4 - LINQ Expressions.csproj", "{548A0FCB-36BD-4721-9884-B3FC52707364}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 9 - LINQ", "Модуль 9 - LINQ", "{9C860D8E-15C9-4615-9EE7-568CA8A3C86D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 09 - LINQ", "Модуль 09 - LINQ", "{9C860D8E-15C9-4615-9EE7-568CA8A3C86D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 9.1 - Перечислимые типы", "Lecture91\Лекция 9.1 - Перечислимые типы.csproj", "{C5246FD9-8046-4428-91DF-D3D1116C2FD6}"
 EndProject
@@ -61,11 +61,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 9.2 - LINQ", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{43D780AA-642B-4D21-B6B2-F3C0390A7973}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harmonizer", "..\Harmonizer\Harmonizer.csproj", "{F975BA54-D207-4C65-AA7C-DD4EAABA2106}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Модуль 10 - Параллельное программирование", "Модуль 10 - Параллельное программирование", "{64AED2CC-C242-4655-A19C-817675BE634E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harmonizer.Tests", "..\Harmonizer.Tests\Harmonizer.Tests.csproj", "{5C438372-E9FE-4965-B7B8-56EDCFFD5339}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{83C3A4FC-BD69-4D27-B2B6-6C93D039AEE6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лекция 10.2 - Асинхронное программирование интерфейсов", "Lecture102\Лекция 10.2 - Асинхронное программирование интерфейсов.csproj", "{0BE18144-8243-4472-A62C-67B7FCB410B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -287,26 +285,16 @@ Global
 		{43D780AA-642B-4D21-B6B2-F3C0390A7973}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{43D780AA-642B-4D21-B6B2-F3C0390A7973}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{43D780AA-642B-4D21-B6B2-F3C0390A7973}.Release|x86.ActiveCfg = Release|Any CPU
-		{F975BA54-D207-4C65-AA7C-DD4EAABA2106}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F975BA54-D207-4C65-AA7C-DD4EAABA2106}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F975BA54-D207-4C65-AA7C-DD4EAABA2106}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{F975BA54-D207-4C65-AA7C-DD4EAABA2106}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{F975BA54-D207-4C65-AA7C-DD4EAABA2106}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{F975BA54-D207-4C65-AA7C-DD4EAABA2106}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F975BA54-D207-4C65-AA7C-DD4EAABA2106}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F975BA54-D207-4C65-AA7C-DD4EAABA2106}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{F975BA54-D207-4C65-AA7C-DD4EAABA2106}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{F975BA54-D207-4C65-AA7C-DD4EAABA2106}.Release|x86.ActiveCfg = Release|Any CPU
-		{5C438372-E9FE-4965-B7B8-56EDCFFD5339}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5C438372-E9FE-4965-B7B8-56EDCFFD5339}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5C438372-E9FE-4965-B7B8-56EDCFFD5339}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{5C438372-E9FE-4965-B7B8-56EDCFFD5339}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{5C438372-E9FE-4965-B7B8-56EDCFFD5339}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{5C438372-E9FE-4965-B7B8-56EDCFFD5339}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5C438372-E9FE-4965-B7B8-56EDCFFD5339}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5C438372-E9FE-4965-B7B8-56EDCFFD5339}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{5C438372-E9FE-4965-B7B8-56EDCFFD5339}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{5C438372-E9FE-4965-B7B8-56EDCFFD5339}.Release|x86.ActiveCfg = Release|Any CPU
+		{0BE18144-8243-4472-A62C-67B7FCB410B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BE18144-8243-4472-A62C-67B7FCB410B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BE18144-8243-4472-A62C-67B7FCB410B8}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0BE18144-8243-4472-A62C-67B7FCB410B8}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0BE18144-8243-4472-A62C-67B7FCB410B8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0BE18144-8243-4472-A62C-67B7FCB410B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BE18144-8243-4472-A62C-67B7FCB410B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BE18144-8243-4472-A62C-67B7FCB410B8}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0BE18144-8243-4472-A62C-67B7FCB410B8}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0BE18144-8243-4472-A62C-67B7FCB410B8}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -333,8 +321,6 @@ Global
 		{548A0FCB-36BD-4721-9884-B3FC52707364} = {970ED5B7-848E-4A64-818F-2B7B24F0F7C3}
 		{C5246FD9-8046-4428-91DF-D3D1116C2FD6} = {9C860D8E-15C9-4615-9EE7-568CA8A3C86D}
 		{D6079D66-64B2-4A09-99BF-E07C15BF8101} = {9C860D8E-15C9-4615-9EE7-568CA8A3C86D}
-		{43D780AA-642B-4D21-B6B2-F3C0390A7973} = {83C3A4FC-BD69-4D27-B2B6-6C93D039AEE6}
-		{F975BA54-D207-4C65-AA7C-DD4EAABA2106} = {83C3A4FC-BD69-4D27-B2B6-6C93D039AEE6}
-		{5C438372-E9FE-4965-B7B8-56EDCFFD5339} = {83C3A4FC-BD69-4D27-B2B6-6C93D039AEE6}
+		{0BE18144-8243-4472-A62C-67B7FCB410B8} = {64AED2CC-C242-4655-A19C-817675BE634E}
 	EndGlobalSection
 EndGlobal
