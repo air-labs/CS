@@ -94,6 +94,15 @@ namespace Harmonizer
                     File.Move(RootFolder + e.TargetPath + e.InitialProjectFileName, RootFolder + e.TargetProjectFileName);
             }
         }
+
+        static void DeleteOldSubdirectories(SlnItem root)
+        {
+            foreach (var e in root.Traversal)
+            {
+                if (!e.IsProject) continue;
+                Directory.Delete(Path.Combine(RootFolder,e.InitialProjectFolder),true);
+            }
+        }
         
 
         public static void Main()
@@ -108,6 +117,7 @@ namespace Harmonizer
             Assign(root);
             CrateSubdirectories(root);
             CopyProjects(root);
+            
 
             SlnFileReader.WriteSlnFile(RootFolder + "\\"+ file.Name, root);
         }
