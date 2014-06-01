@@ -8,6 +8,15 @@ using System.Threading.Tasks;
 namespace Harmonizer
 {
 
+    public static class SlnItemListExtensions
+    {
+        public static IEnumerable<SlnItem> Traversal(this IEnumerable<SlnItem> items)
+        {
+            foreach (var e in items)
+                foreach (var w in e.Traversal)
+                    yield return w;
+        }
+    }
 
     public class SlnItem
     {
@@ -24,8 +33,8 @@ namespace Harmonizer
         public bool HasProperName { get { return ProperName != null; } }
 
         public string TargetName;
-        public string TargetPath;
-        public string TargetProjectFileName;
+        public string TargetFolder;
+        public string TargetProjectFilePath;
         public int Depth;
 
         public List<SlnItem> Items = new List<SlnItem>();

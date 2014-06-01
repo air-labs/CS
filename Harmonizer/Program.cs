@@ -35,10 +35,10 @@ namespace Harmonizer
                 else
                     e.TargetName = e.FullName;
 
-                e.TargetPath = item.TargetPath + e.TargetName +"\\";
+                e.TargetFolder = item.TargetFolder + e.TargetName +"\\";
 
                 if (e.IsProject)
-                    e.TargetProjectFileName = e.TargetPath + e.TargetName + ".csproj";
+                    e.TargetProjectFilePath = e.TargetFolder + e.TargetName + ".csproj";
 
                 Assign(e);
             }
@@ -68,7 +68,7 @@ namespace Harmonizer
             
             Directory.CreateDirectory(TargetRoot);
             foreach (var e in item.Traversal)
-                Directory.CreateDirectory(TargetRoot + e.TargetPath);
+                Directory.CreateDirectory(TargetRoot + e.TargetFolder);
         }
 
         public static void MoveFiles(DirectoryInfo sourceDirectory, DirectoryInfo targetDirectory)
@@ -89,9 +89,9 @@ namespace Harmonizer
                 if (!e.IsProject) continue;
                 MoveFiles(
                     new DirectoryInfo(SourceRoot+e.InitialProjectFolder),
-                    new DirectoryInfo(TargetRoot + e.TargetPath));
+                    new DirectoryInfo(TargetRoot + e.TargetFolder));
                 if (e.HasProperName)
-                    File.Move(TargetRoot + e.TargetPath + e.InitialProjectFileName, TargetRoot + e.TargetProjectFileName);
+                    File.Move(TargetRoot + e.TargetFolder + e.InitialProjectFileName, TargetRoot + e.TargetProjectFilePath);
             }
         }
 
@@ -103,27 +103,43 @@ namespace Harmonizer
                 Directory.Delete(Path.Combine(SourceRoot,e.InitialProjectFolder),true);
             }
         }
+
+        static void AssignUntouched(IEnumerable<SlnItem> items)
+        {
+            foreach (var e in items.Traversal())
+            {
+                e.TargetName = e.FullName;
+                e.TargetProjectFilePath = e.InitialProjectFilePath;
+            }
+
+        }
         
 
         public static void Main()
         {
+            Func<SlnItem, bool> selector = z => z.FullName != "Common";
+
+
             var file = new FileInfo(SlnFileName);
             SourceRoot = file.Directory.FullName+"\\";
             var items = SlnFileReader.ReadProjects(file.FullName);
 
-            var root = new SlnItem { Depth = 0, TargetPath="" };
-            root.Items.AddRange(items.Where(z=>z.FullName!="Common"));
+            var root = new SlnItem { Depth = 0, TargetFolder="" };
+            root.Items.AddRange(items.Where(selector));
             
             Assign(root);
             CrateSubdirectories(root);
             CopyProjects(root);
-            DeleteOldSubdirectories(root);
+
+            AssignUntouched(items.Where(z => !selector(z)));
+
+            SlnFileReader.WriteSlnFile(Path.Combine(TargetRoot, file.Name), items);
+
+           DeleteOldSubdirectories(root);
             file.Delete();
             MoveFiles(new DirectoryInfo(TargetRoot), new DirectoryInfo(SourceRoot));
 
-            root.Items.Clear();
-            root.Items.AddRange(items);
-            SlnFileReader.WriteSlnFile(Path.Combine(SourceRoot,file.Name), root);
+            
         }
     }
 }

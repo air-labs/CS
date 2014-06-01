@@ -20,7 +20,7 @@ namespace Harmonizer
             {
                 result.InitialProjectFilePath = match.Groups[3].Value;
                 result.InitialProjectFolder = result.InitialProjectFilePath.Substring(0, result.InitialProjectFilePath.LastIndexOf("\\"));
-                result.InitialProjectFileName = result.InitialProjectFilePath.Substring(result.InitialProjectFolder.Length, result.InitialProjectFilePath.Length - result.InitialProjectFolder.Length);
+                result.InitialProjectFileName = result.InitialProjectFilePath.Substring(result.InitialProjectFolder.Length+1, result.InitialProjectFilePath.Length - result.InitialProjectFolder.Length-1);
             }
             result.FullName = match.Groups[2].Value;
             result.ProjectTypeGuid = match.Groups[1].Value;
@@ -42,7 +42,7 @@ namespace Harmonizer
         }
 
 
-       public static void WriteSlnFile(string filename, SlnItem root)
+       public static void WriteSlnFile(string filename, List<SlnItem> root)
        {
            using (var writer = new StreamWriter(filename,false,Encoding.UTF8))
            {
@@ -50,13 +50,15 @@ namespace Harmonizer
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012");
 
-               foreach (var e in root.Traversal.Skip(1))
+
+
+               foreach (var e in root.Traversal())
                {
                    writer.WriteLine(@"Project(""{{{0}}}"") = ""{1}"", ""{2}"", ""{{{3}}}""
 EndProject",
            e.ProjectTypeGuid,
            e.TargetName,
-           e.TargetProjectFileName ?? e.TargetName,
+           e.TargetProjectFilePath ?? e.TargetName,
            e.Guid);
                }
 
@@ -77,7 +79,7 @@ Global
                writer.WriteLine(@"
     GlobalSection(NestedProjects) = preSolution");
 
-               foreach (var e in root.Traversal.Skip(1))
+               foreach (var e in root.Traversal())
                    foreach (var m in e.Items)
                        writer.WriteLine("\t\t\t{{{0}}} = {{{1}}}", m.Guid, e.Guid);
 
