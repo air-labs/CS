@@ -55,20 +55,20 @@ namespace Harmonizer
         }
 
         static string SlnFileName = "..\\..\\..\\CSBasic\\CS.sln";
-        static string RootFolder=".\\Temp\\";
-        static string SlnFolder;
+        static string TargetRoot=".\\Temp\\";
+        static string SourceRoot;
 
         public static void CrateSubdirectories(SlnItem item)
         {
             try
             {
-                Directory.Delete(RootFolder, true);
+                Directory.Delete(TargetRoot, true);
             }
             catch { }
             
-            Directory.CreateDirectory(RootFolder);
+            Directory.CreateDirectory(TargetRoot);
             foreach (var e in item.Traversal)
-                Directory.CreateDirectory(RootFolder + e.TargetPath);
+                Directory.CreateDirectory(TargetRoot + e.TargetPath);
         }
 
         public static void MoveFiles(DirectoryInfo sourceDirectory, DirectoryInfo targetDirectory)
@@ -88,10 +88,10 @@ namespace Harmonizer
             {
                 if (!e.IsProject) continue;
                 MoveFiles(
-                    new DirectoryInfo(SlnFolder+e.InitialProjectFolder),
-                    new DirectoryInfo(RootFolder + e.TargetPath));
+                    new DirectoryInfo(SourceRoot+e.InitialProjectFolder),
+                    new DirectoryInfo(TargetRoot + e.TargetPath));
                 if (e.HasProperName)
-                    File.Move(RootFolder + e.TargetPath + e.InitialProjectFileName, RootFolder + e.TargetProjectFileName);
+                    File.Move(TargetRoot + e.TargetPath + e.InitialProjectFileName, TargetRoot + e.TargetProjectFileName);
             }
         }
 
@@ -100,7 +100,7 @@ namespace Harmonizer
             foreach (var e in root.Traversal)
             {
                 if (!e.IsProject) continue;
-                Directory.Delete(Path.Combine(RootFolder,e.InitialProjectFolder),true);
+                Directory.Delete(Path.Combine(SourceRoot,e.InitialProjectFolder),true);
             }
         }
         
@@ -108,7 +108,7 @@ namespace Harmonizer
         public static void Main()
         {
             var file = new FileInfo(SlnFileName);
-            SlnFolder = file.Directory.FullName+"\\";
+            SourceRoot = file.Directory.FullName+"\\";
             var items = SlnFileReader.ReadProjects(file.FullName);
 
             var root = new SlnItem { Depth = 0, TargetPath="" };
@@ -117,9 +117,10 @@ namespace Harmonizer
             Assign(root);
             CrateSubdirectories(root);
             CopyProjects(root);
-            
+            DeleteOldSubdirectories(root);
+            file.Delete();
 
-            SlnFileReader.WriteSlnFile(RootFolder + "\\"+ file.Name, root);
+            SlnFileReader.WriteSlnFile(TargetRoot + "\\"+ file.Name, root);
         }
     }
 }
