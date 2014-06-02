@@ -71,6 +71,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harmonizer", "..\Harmonizer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harmonizer.Tests", "..\Harmonizer.Tests\Harmonizer.Tests.csproj", "{5C438372-E9FE-4965-B7B8-56EDCFFD5339}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harmonizer.Run", "..\Harmonizer.Run\Harmonizer.Run.csproj", "{0F43210E-4B25-46B6-80D0-90E1A0FAF98D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -321,6 +323,16 @@ Global
 		{5C438372-E9FE-4965-B7B8-56EDCFFD5339}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{5C438372-E9FE-4965-B7B8-56EDCFFD5339}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{5C438372-E9FE-4965-B7B8-56EDCFFD5339}.Release|x86.ActiveCfg = Release|Any CPU
+		{0F43210E-4B25-46B6-80D0-90E1A0FAF98D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F43210E-4B25-46B6-80D0-90E1A0FAF98D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F43210E-4B25-46B6-80D0-90E1A0FAF98D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0F43210E-4B25-46B6-80D0-90E1A0FAF98D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0F43210E-4B25-46B6-80D0-90E1A0FAF98D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0F43210E-4B25-46B6-80D0-90E1A0FAF98D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F43210E-4B25-46B6-80D0-90E1A0FAF98D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F43210E-4B25-46B6-80D0-90E1A0FAF98D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0F43210E-4B25-46B6-80D0-90E1A0FAF98D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0F43210E-4B25-46B6-80D0-90E1A0FAF98D}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -351,5 +363,6 @@ Global
 		{43D780AA-642B-4D21-B6B2-F3C0390A7973} = {B0CDCB11-D0EA-4C93-A64E-128EBB4E5277}
 		{F975BA54-D207-4C65-AA7C-DD4EAABA2106} = {B0CDCB11-D0EA-4C93-A64E-128EBB4E5277}
 		{5C438372-E9FE-4965-B7B8-56EDCFFD5339} = {B0CDCB11-D0EA-4C93-A64E-128EBB4E5277}
+		{0F43210E-4B25-46B6-80D0-90E1A0FAF98D} = {B0CDCB11-D0EA-4C93-A64E-128EBB4E5277}
 	EndGlobalSection
 EndGlobal

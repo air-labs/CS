@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Harmonizer
 {
 
-    public static class SlnItemListExtensions
+    static class SlnItemListExtensions
     {
         public static IEnumerable<SlnItem> Traversal(this IEnumerable<SlnItem> items)
         {

@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace Harmonizer
 {
-    class Program
+    public class Renamer
     {
-
         static string[] Names = new string[] { "Модуль", "Лекция" };
 
         class SlnItemComparer : Comparer<SlnItem>
@@ -54,11 +53,11 @@ namespace Harmonizer
             }
         }
 
-        static string SlnFileName = "..\\..\\..\\CSBasic\\CS.sln";
+        static string SlnFileName;
         static string TargetRoot=".\\Temp\\";
         static string SourceRoot;
 
-        public static void CrateSubdirectories(SlnItem item)
+        static void CrateSubdirectories(SlnItem item)
         {
             try
             {
@@ -71,7 +70,7 @@ namespace Harmonizer
                 Directory.CreateDirectory(TargetRoot + e.TargetFolder);
         }
 
-        public static void MoveFiles(DirectoryInfo sourceDirectory, DirectoryInfo targetDirectory)
+        static void MoveFiles(DirectoryInfo sourceDirectory, DirectoryInfo targetDirectory)
         {
             foreach (var file in sourceDirectory.GetFiles())
                 file.CopyTo(targetDirectory.FullName + "\\" + file.Name);
@@ -82,7 +81,7 @@ namespace Harmonizer
             }
         }
 
-        public static void CopyProjects(SlnItem root)
+        static void CopyProjects(SlnItem root)
         {
             foreach (var e in root.Traversal)
             {
@@ -114,11 +113,20 @@ namespace Harmonizer
 
         }
         
-
-        public static void Main()
+        /// <summary>
+        /// Переименовывает файловую структуру проекта в соответствии с логической структурой sln-файла
+        /// 
+        /// Предполагается, что Solution состоит из папок и проектов. Некоторые из папок/проектов верхнего уровня являются
+        /// "особенными", и они никуда перемещены не будут. Все неособенные проекты должны физически находится внутри той же папки, где лежит solution
+        /// </summary>
+        /// <param name="solutionFileName">Полный путь до solution-файла</param>
+        /// <param name="specialProjectNames">Список имен папок/проектов верхнего уровня, которые являются особенными</param>
+        /// <param name="levelNames">Имена уровней (модуль, лекция, тема, часть и т.д.)</param>
+        public static void Rename(string solutionFileName, string[] specialProjectNames, string[] levelNames)
         {
-            Func<SlnItem, bool> selector = z => z.FullName != "Common";
-
+            Names = levelNames;
+            Func<SlnItem, bool> selector = z => !specialProjectNames.Contains(z.FullName);
+            SlnFileName = solutionFileName;
 
             var file = new FileInfo(SlnFileName);
             SourceRoot = file.Directory.FullName+"\\";
