@@ -12,7 +12,7 @@ namespace Harmonizer.Run
         {
             Harmonizer.Renamer.Rename(
                 "..\\..\\..\\CSBasic\\CS.sln",
-                new string[] { "Common" },
+                new string[] { "Common", "Лабораторные работы" },
                 new string[] { "Модуль", "Лекция" });
         }
     }
