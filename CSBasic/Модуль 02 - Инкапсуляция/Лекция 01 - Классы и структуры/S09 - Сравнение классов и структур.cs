@@ -5,12 +5,10 @@ namespace L1S10
     {
         public int field;
     }
-
     public class MyClass
     {
         public int field;
     }
-
     public class Program
     {
         static void ProcessStruct(MyStruct s)
@@ -21,8 +19,6 @@ namespace L1S10
         {
             s.field = 10;
         }
-
-
         public static void MainX()
         {
             //Что напечатает программа?

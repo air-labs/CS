@@ -20,7 +20,7 @@ using System; //встроенный комментарий
 		
 		public static void MainX()
 		{
-			PrintMethod(ConsoleColor.Gray, "Gray string"); //!Показать, что документация доступна через IntelliSence
+			PrintMethod(ConsoleColor.Gray, "Gray string"); //Документация доступна через IntelliSence
 			PrintMethod(ConsoleColor.White, "White string");
 	}
 }

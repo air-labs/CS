@@ -5,19 +5,16 @@ namespace S10
     {
         public int classField;
     }
-
     public struct MyStruct
     {
         public MyClass myObject;
     }
-
     public class Program
     {
         public static void ProcessStruct(MyStruct str)
         {
             str.myObject.classField = 10;
         }
-
         public static void MainX()
         {
             //Что напечатает программа?
