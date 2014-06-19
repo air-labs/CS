@@ -21,9 +21,37 @@ namespace S07
     {
         public static void MainX()
         {
+            //Где произойдет исключение? Ответ внизу страницы.
             var obj = new SecondClass();
             Console.WriteLine(obj.structObject.field);
-            Console.WriteLine(obj.classObject.field); //исключение: obj.classObject неопределен
+            Console.WriteLine(obj.classObject.field); 
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// в третьей строчке, т.к. obj.classField==null

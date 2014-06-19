@@ -20,6 +20,7 @@ namespace S10
 
         public static void MainX()
         {
+            //Что напечатает программа?
             var str = new MyStruct();
             str.myObject = new MyClass();
             ProcessStruct(str);
@@ -27,3 +28,28 @@ namespace S10
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 10, т.к. ссылка на объект скопировалась при копировании структуры, а объект - тот же.

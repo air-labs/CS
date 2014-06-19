@@ -25,6 +25,7 @@ namespace L1S10
 
         public static void MainX()
         {
+            //Что напечатает программа?
             var str = new MyStruct();
             ProcessStruct(str);
             Console.WriteLine(str.field);
@@ -35,3 +36,30 @@ namespace L1S10
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//0 10, т.к. структура копируется при передаче в метод
