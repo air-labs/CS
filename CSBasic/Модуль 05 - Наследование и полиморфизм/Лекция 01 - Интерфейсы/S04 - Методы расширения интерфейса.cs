@@ -30,7 +30,7 @@ namespace L2S04
 	
 	class Program
 	{
-		public static void Main()
+		public static void MainЧ()
 		{
 			new Person{ Name="Smith", Age=20 }.PrintWithColor ();
 		}

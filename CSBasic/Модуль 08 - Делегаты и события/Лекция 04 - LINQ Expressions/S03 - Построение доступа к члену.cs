@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 
 class L5S03
 {
-    public static void Main()
+    public static void MainX()
     {
 
         var param = Expression.Parameter(typeof(DateTime), "s");

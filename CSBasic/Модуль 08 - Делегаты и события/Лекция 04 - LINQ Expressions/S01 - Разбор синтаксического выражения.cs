@@ -29,7 +29,7 @@ class L5S01
 		Console.WriteLine (GetString(f.Body));
 	}
 	
-	public static void MainX()
+	public static void Main()
 	{
 		Print (z=>z*(z+5));	
 	}
