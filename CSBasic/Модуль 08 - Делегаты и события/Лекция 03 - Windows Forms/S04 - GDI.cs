@@ -39,7 +39,7 @@ public class S04 : Form
             new Rectangle(10, 90, ClientSize.Width - 20, 30));
     }
 
-    public static void Main()
+    public static void MainX()
     {
         Application.Run(new S04());
     }

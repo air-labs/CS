@@ -60,6 +60,12 @@
     <Compile Include="S02 - Объявление формы.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="S05 - Неправильная архитектура отрисовки.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="S06 - правильная архитектура отрисовки.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="S03 - Дизайнер.resx">
       <DependentUpon>S03 - Дизайнер.cs</DependentUpon>
     </EmbeddedResource>
