@@ -2,7 +2,12 @@
 {
     public class Employee
     {
-        public string Name { get; set; }
+        string name;
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
         public string LastName { get; set; }
 		
 		public readonly double Salary;

@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="L1S02 - Операторы is и as.cs" />
     <Compile Include="S01 - Интерфейсы.cs" />
     <Compile Include="S02 - Множественная реализация интерфейсов.cs" />
     <Compile Include="S03 - Свойства в интерфейсе.cs" />

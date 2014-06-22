@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class L1S05
+public class L1S04
 {
     public static void MainX()
     {

@@ -4,7 +4,7 @@ class L1S03
 {
 	public static void MainX()
 	{
-		var outStream=File.Open ("streambin",FileMode.OpenOrCreate, FileAccess.Write);
+        var outStream=File.Open ("streambin",FileMode.OpenOrCreate, FileAccess.Write);
 		var byteWriter=new BinaryWriter(outStream);
 		for (int i=1;i<10000 ;i*=2)
 			byteWriter.Write (i-1);

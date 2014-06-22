@@ -44,13 +44,12 @@
     <Compile Include="L1S01 - Структура программы.cs" />
     <Compile Include="L1S02 - Области видимости переменных.cs" />
     <Compile Include="L1S03 - Методы, комментарии, документация.cs" />
-    <Compile Include="L1S04 - Константы и поля только для чтения.cs" />
-    <Compile Include="L1S05 - Типы данных.cs" />
+    <Compile Include="L1S04 - Типы данных.cs" />
     <Compile Include="L1S06 - Арифметические и логические операции.cs" />
     <Compile Include="L1S07 - Перечисления.cs" />
-    <Compile Include="L1S08 - Флаги.cs" />
-    <Compile Include="L1S09 - Строки.cs" />
+    <Compile Include="L1S08 - Флаги и битовые операции.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="L1S05 - Статическое и динамическое.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

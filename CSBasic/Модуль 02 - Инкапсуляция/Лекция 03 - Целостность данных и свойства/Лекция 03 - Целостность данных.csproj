@@ -51,6 +51,7 @@
     <Compile Include="S01 - Ошибки целостности.cs" />
     <Compile Include="S02 - Защита целостности.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="S10 - Конструкторы.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

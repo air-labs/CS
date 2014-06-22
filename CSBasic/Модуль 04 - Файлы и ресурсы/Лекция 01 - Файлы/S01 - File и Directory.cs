@@ -3,7 +3,7 @@ using System;
 using System.Text;
 class L1S01
 {
-	public static void MainX()
+	public static void Main()
 	{
 		Console.WriteLine(Directory.Exists("Temp"));
 		Directory.CreateDirectory("Temp");
